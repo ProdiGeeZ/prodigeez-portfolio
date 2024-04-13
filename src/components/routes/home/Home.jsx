@@ -21,7 +21,7 @@ function Home() {
                     <p className="text-base font-semibold md:text-lg p-6 lg:mb-6 ">
                         Eager developer looking to learn, contribute, and grow in vast world of technology.
                     </p>
-                    <Button className="w-[35%] h-[6%] mb-12 md:w-auto md:text-base text-md rounded-md font-semibold hover:bg-[#fd8d8d] hover:text-white lg:text-lg lg:mb-20 transition ease-in-out">
+                    <Button href="/projects" className="w-[35%] h-[6%] mb-12 md:w-auto md:text-base text-md rounded-md font-semibold hover:bg-[#fd8d8d] hover:text-white lg:text-lg lg:mb-20 transition ease-in-out">
                         <Link to={"/projects"}>View My Work</Link>
                     </Button>
                     <div className="flex flex-wrap justify-center w-70 px-5 py-2 items-center gap-2 md:gap-4 md:mt-4 lg:w-70 border-[#494949b7] border-2 rounded-full p-1 hover:bg-[#6700007a] transition ease-in-out root:bg-transparent">
