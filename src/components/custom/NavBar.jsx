@@ -9,6 +9,7 @@ import { ModeToggle } from "../ui/ModeToggle";
 import { Button } from "../ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "../ui/dropdown-menu";
 import { Link as Scroll } from 'react-scroll'
+import { Link } from "react-router-dom";
 
 function NavBar() {
     return (
@@ -29,8 +30,8 @@ function NavBar() {
                                 </Button>
                             </DropdownMenuTrigger>
                             <DropdownMenuContent>
-                                <DropdownMenuItem href="/projects">
-                                    Projects
+                                <DropdownMenuItem >
+                                    <Link to="/projects">Projects</Link>
                                 </DropdownMenuItem>
                                 <DropdownMenuItem href="/contact">
                                     Contact Me
