@@ -8,7 +8,7 @@ import { Menu } from 'lucide-react';
 import { ModeToggle } from "../ui/ModeToggle";
 import { Button } from "../ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "../ui/dropdown-menu";
-import { Link } from 'react-scroll'
+import { Link as Scroll } from 'react-scroll'
 
 function NavBar() {
     return (
@@ -46,9 +46,9 @@ function NavBar() {
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
-                                <Link to="about" spy={true} smooth={true} duration={500} className="text-base font-medium cursor-pointer self-center">
+                                <Scroll to="about" spy={true} smooth={true} duration={500} className="text-base font-medium cursor-pointer self-center">
                                     About
-                                </Link>
+                                </Scroll>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
                                 <Button variant='default' href="/contact" className="hover:bg-[#fd8d8d] transition ease-in-out">Contact Me</Button>

@@ -3,8 +3,8 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { ChevronDown } from 'lucide-react';
 import { Button } from "@/components/ui/button"
 import About from "./About";
-import { Link } from 'react-scroll'
-
+import { Link as Scroll } from 'react-scroll'
+import { Link } from "react-router-dom";
 
 function Home() {
     return (
@@ -22,7 +22,7 @@ function Home() {
                         Eager developer looking to learn, contribute, and grow in vast world of technology.
                     </p>
                     <Button className="w-[35%] h-[6%] mb-12 md:w-auto md:text-base text-md rounded-md font-semibold hover:bg-[#fd8d8d] hover:text-white lg:text-lg lg:mb-20 transition ease-in-out">
-                        View My Work
+                        <Link to={"/projects"}>View My Work</Link>
                     </Button>
                     <div className="flex flex-wrap justify-center w-70 px-5 py-2 items-center gap-2 md:gap-4 md:mt-4 lg:w-70 border-[#494949b7] border-2 rounded-full p-1 hover:bg-[#6700007a] transition ease-in-out root:bg-transparent">
                         <h6 className="text-md md:text-lg lg:text-xl mb-0 font-bold flex items-center">Tech Stack</h6>
@@ -36,9 +36,9 @@ function Home() {
                         <i className="devicon-postgresql-plain-wordmark text-xl lg:text-[32px] hover:scale-125 transition ease-in-out"></i>
                     </div>
                     <div>
-                        <Link to="about" spy={true} smooth={true} duration={500}>
+                        <Scroll to="about" spy={true} smooth={true} duration={500}>
                             <ChevronDown className="cursor-pointer self-center mt-20 md:mt-5 hover:scale-125 hover:text-[#b30000] transition ease-in-out duration-300" style={{ fontSize: '45px' }} />
-                        </Link>
+                        </Scroll>
                     </div>
                 </div>
             </div>
