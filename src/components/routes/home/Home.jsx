@@ -3,13 +3,14 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { ChevronDown } from 'lucide-react';
 import { Button } from "@/components/ui/button"
 import About from "./About";
+import { Link } from 'react-scroll'
 
 
 function Home() {
     return (
         <>
             <div className="w-full h-full flex items-center justify-center">
-                <div className="text-center w-full h-[95vh] pt-12 mt-8 md:mt-0 flex flex-col items-center p-1 md:p-20">
+                <div className="text-center w-full h-[100vh] pt-12 mt-8 md:mt-0 flex flex-col items-center p-1 md:p-20">
                     <Avatar
                         className="rounded-full w-[200px] h-[200px] mb-6 sm:w-24 sm:h-24 md:w-full md:h-auto md:mb-2 lg:mb-0 dark:border-4 dark:border-[#dc26269d] lg:w-48 lg:h-48">
                         <AvatarImage src="./avatar.png" />
@@ -34,10 +35,16 @@ function Home() {
                             className="w-6 h-6 md:w-8 md:h-8 hover:scale-125 transition ease-in-out" />
                         <i className="devicon-postgresql-plain-wordmark text-xl lg:text-[32px] hover:scale-125 transition ease-in-out"></i>
                     </div>
-                    <ChevronDown className="align-self-center mt-20 md:mt-5 hover:scale-125 hover:text-[#b30000] transition ease-in-out " size="45px" />
+                    <div>
+                        <Link to="about" spy={true} smooth={true} duration={500}>
+                            <ChevronDown className="cursor-pointer self-center mt-20 md:mt-5 hover:scale-125 hover:text-[#b30000] transition ease-in-out duration-300" style={{ fontSize: '45px' }} />
+                        </Link>
+                    </div>
                 </div>
             </div>
-            <About />
+            <div id="about">
+                <About  />
+            </div>
         </>
     )
 }
