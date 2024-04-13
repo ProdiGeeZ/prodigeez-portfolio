@@ -52,7 +52,7 @@
 @layer base {
   * {
     @apply border-border;
-    font-family: 'Synonym', sans-serif;
+    font-family: 'Inter','Synonym', sans-serif;
   }
   body {
     @apply bg-background text-foreground;
