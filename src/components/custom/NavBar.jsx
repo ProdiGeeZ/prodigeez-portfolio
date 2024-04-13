@@ -4,20 +4,43 @@ import {
     NavigationMenuItem,
     NavigationMenuLink
 } from "@/components/ui/navigation-menu";
+import { Menu } from 'lucide-react';  
 import { ModeToggle } from "../ui/ModeToggle";
 import { Button } from "../ui/button";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "../ui/dropdown-menu";
 
 function NavBar() {
     return (
         <header className="">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
+                <div className="flex justify-between items-center py-6 md:justify-start">
                     <div className="flex justify-start lg:w-0 lg:flex-1">
-                        <a href="/" className="text-xl font-bold text-primary hover-secondary :hover-bg-secondary">
+                        <a href="/" className="text-xl md:text-2xl font-bold text-primary hover:text-[#ff3a2c] transition-all" style={{ textShadow: '0px 0px 3px rgba(255, 85, 85, 0.5)', 'hover': {textShadow: '2px 2px 15px 0 rgba(255, 85, 85, 0.9)'} }}>
                             SAABIR.DEV
                         </a>
                     </div>
-                    <NavigationMenu className="flex items-center justify-end md:flex-1 lg:w-0">
+                    <div className="md:hidden flex space-x-2 ">
+                        <ModeToggle/>
+                        <DropdownMenu className="w-full mr-10">
+                            <DropdownMenuTrigger asChild>
+                                <Button variant="outline" size="icon">
+                                    <Menu />
+                                </Button>
+                            </DropdownMenuTrigger>
+                            <DropdownMenuContent>
+                                <DropdownMenuItem href="/projects">
+                                    Projects
+                                </DropdownMenuItem>
+                                <DropdownMenuItem href="/about">
+                                    About
+                                </DropdownMenuItem>
+                                <DropdownMenuItem href="/contact">
+                                    Contact Me
+                                </DropdownMenuItem>
+                            </DropdownMenuContent>
+                        </DropdownMenu>
+                    </div>
+                    <NavigationMenu className="hidden md:flex items-center justify-end lg:w-0">
                         <NavigationMenuList className="flex space-x-8">
                             <NavigationMenuItem>
                                 <NavigationMenuLink href="/projects" className="text-base font-medium">
@@ -30,7 +53,7 @@ function NavBar() {
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
-                                <Button variant='outline' href="/contact">Contact Me</Button>
+                                <Button variant='default' href="/contact">Contact Me</Button>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
                                 <ModeToggle />
