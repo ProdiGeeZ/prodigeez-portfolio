@@ -53,7 +53,7 @@ function NavBar() {
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
-                                <Button variant='default' href="/contact">Contact Me</Button>
+                                <Button variant='default' href="/contact" className="hover:bg-[#fd8d8d] transition ease-in-out">Contact Me</Button>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
                                 <ModeToggle />

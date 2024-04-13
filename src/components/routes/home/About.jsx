@@ -27,7 +27,7 @@ function About() {
                 <p className="mb-6 leading-relaxed text-base">
                     From a young age, I've been fascinated by creative arts, exploring photography, videography, and graphic design through school and beyond.
                 </p>
-                <Button href="/portfolio" className="inline-flex items-center justify-center w-44 md:w-auto px-6 py-2 md:text-base text-md rounded-md font-semibold lg:text-lg lg:mb-6">
+                <Button href="/portfolio" className="inline-flex items-center justify-center w-44 md:w-auto px-6 py-2 md:text-base text-md rounded-md font-semibold lg:text-lg lg:mb-6 hover:bg-[#fd8d8d] transition ease-in-out delay-150">
                     See Portfolio <ChevronRight aria-label="Right arrow" />
                 </Button>
             </div>
