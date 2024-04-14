@@ -5,11 +5,12 @@ import { Button } from "@/components/ui/button";
 import { CalendarDays } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Info } from 'lucide-react';
+import { Link } from "react-router-dom";
 
 
-const ProjectCard = ({ imageSrc, title, hoverTitle, description, date, technologies }) => {
+const ProjectCard = ({ imageSrc, title, hoverTitle, description, date, technologies, name }) => {
     return (
-        <Card className="w-[350px] hover:scale-105 transition ease-in-out duration-500 hover:ring-2 ring-foreground ring-opacity-15 shadow-md hover:shadow-xl">
+        <Card className="w-[350px] hover:scale-105 transition ease-in-out duration-500 hover:ring-2 ring-foreground dark:hover:ring-emerald-500 dark:ring-opacity-15 ring-opacity-15 shadow-md hover:shadow-xl">
             <CardContent className="p-0">
                 <div className="aspect-w-1 aspect-h-1 overflow-hidden">
                     <img src={imageSrc}
@@ -22,7 +23,7 @@ const ProjectCard = ({ imageSrc, title, hoverTitle, description, date, technolog
                 <HoverCard>
                     <HoverCardTrigger asChild>
                         <span className="inline-flex items-center h-10 space-x-2">
-                            <span className="text-xl text-foreground pl-3">{title}</span>
+                            <span className="text-xl text-foreground pl-3"><Link to={`/projects/${name}`}>{title}</Link></span>
                             <Button variant="text" className="text-xl text-foreground p-0">
                                 <Info size="14px" color="grey"/>
                             </Button>
@@ -42,7 +43,7 @@ const ProjectCard = ({ imageSrc, title, hoverTitle, description, date, technolog
                 <div className="flex flex-wrap mt-2 px-2 h-auto">
                     {technologies.map((tech, index) => {
                         return (
-                            <Badge key={index} className="bg-[#169c4e96] hover:bg-[#2f8854a8] dark:bg-[#3aff8c50] dark:text-foreground border-[#08fc6e83] dark:border-[#3aff8c57] m-1 hover:dark:bg-[#3bc775a8]">
+                            <Badge key={index} className="bg-gradient-to-br from-emerald-200 to-emerald-100 border border-emerald-300/50 hover:bg-[#1cff7b]/80 text-[#008d3b]/90 dark:bg-[#4aff95]/50 dark:text-[#008d3b]/90 m-1 hover:dark:bg-[#3bc775]/80 dark:border-none shadow-md hover:shadow-lg backdrop-blur-sm hover:backdrop-blur-md transition-all ease-in-out duration-500">
                                 {tech}
                             </Badge>
                         )

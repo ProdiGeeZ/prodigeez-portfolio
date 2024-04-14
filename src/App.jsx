@@ -5,6 +5,7 @@ import Home from './components/routes/home/Home'
 import { Routes, Route } from 'react-router-dom';
 import Projects from './components/routes/projects/Projects';
 import ProjectView from './components/routes/projectview/ProjectView';
+import Sidebar from './components/custom/SideBar';
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
     <>
       <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
         <NavBar />
+        <Sidebar/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />

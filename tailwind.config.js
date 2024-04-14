@@ -18,6 +18,10 @@ module.exports = {
     },
     extend: {
       colors: {
+        'frosted-light': '#ffffff99',
+        'frosted-dark': '#ffffff33',
+        'dark-frosted-light': '#ffffff40',
+        'dark-frosted-dark': '#00000040',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

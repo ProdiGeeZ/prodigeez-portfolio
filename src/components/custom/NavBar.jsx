@@ -17,7 +17,7 @@ function NavBar() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center py-6 md:justify-start">
                     <div className="flex justify-start lg:w-0 lg:flex-1">
-                        <a href="/" className="text-xl md:text-2xl font-bold text-primary transition-all" style={{ textShadow: '0px 0px 3px rgba(255, 85, 85, 0.5)', 'hover': { textShadow: '2px 2px 15px 0 rgba(255, 85, 85, 0.9)' } }}>
+                        <a href="/" className="text-xl md:text-2xl font-bold text-primary transition-all" >
                             SAABIR.DEV
                         </a>
                     </div>
