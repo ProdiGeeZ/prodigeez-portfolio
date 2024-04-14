@@ -5,7 +5,7 @@ import {
     NavigationMenuLink
 } from "@/components/ui/navigation-menu";
 import { Menu } from 'lucide-react';
-import { ModeToggle } from "../ui/ModeToggle";
+import { ModeToggle } from "./ModeToggle";
 import { Button } from "../ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "../ui/dropdown-menu";
 import { Link as Scroll } from 'react-scroll'
@@ -17,7 +17,7 @@ function NavBar() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center py-6 md:justify-start">
                     <div className="flex justify-start lg:w-0 lg:flex-1">
-                        <a href="/" className="text-xl md:text-2xl font-bold text-primary hover:text-[#ff3a2c] transition-all" style={{ textShadow: '0px 0px 3px rgba(255, 85, 85, 0.5)', 'hover': { textShadow: '2px 2px 15px 0 rgba(255, 85, 85, 0.9)' } }}>
+                        <a href="/" className="text-xl md:text-2xl font-bold text-primary transition-all" style={{ textShadow: '0px 0px 3px rgba(255, 85, 85, 0.5)', 'hover': { textShadow: '2px 2px 15px 0 rgba(255, 85, 85, 0.9)' } }}>
                             SAABIR.DEV
                         </a>
                     </div>
@@ -52,7 +52,7 @@ function NavBar() {
                                 </Scroll>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
-                                <Button variant='default' href="/contact" className="hover:bg-[#fd8d8d] transition ease-in-out">Contact Me</Button>
+                                <Button variant='default' href="/contact" className="transition ease-in-out">Contact Me</Button>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
                                 <ModeToggle />
