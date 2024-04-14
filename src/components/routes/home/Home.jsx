@@ -24,7 +24,7 @@ function Home() {
                     <Button href="/projects" className="w-[35%] h-[6%] mb-12 md:w-auto md:text-base text-md rounded-md font-semibold hover:text-white lg:text-lg lg:mb-20 transition ease-in-out">
                         <Link to={"/projects"}>View My Work</Link>
                     </Button>
-                    <div className="flex flex-wrap justify-center w-70 px-5 py-2 items-center gap-2 md:gap-4 md:mt-4 lg:w-70 border-[#494949b7] border-2 rounded-full p-1 hover:bg-[#6700007a] transition ease-in-out root:bg-transparent">
+                    <div className="flex flex-wrap justify-center w-70 px-5 py-2 items-center gap-2 md:gap-4 md:mt-4 lg:w-70 ring-2 ring-[#076632ad] ring-opacity-50 rounded-full p-1 hover:bg-[#4eff6610] transition ease-in-out duration-300 root:bg-transparent">
                         <h6 className="text-md md:text-lg lg:text-xl mb-0 font-bold flex items-center">Tech Stack</h6>
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
                             alt="Node"

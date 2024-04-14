@@ -10,13 +10,15 @@ import { Link } from "react-router-dom";
 
 const ProjectCard = ({ imageSrc, title, hoverTitle, description, date, technologies, name }) => {
     return (
-        <Card className="w-[350px] hover:scale-105 transition ease-in-out duration-500 hover:ring-2 ring-foreground dark:hover:ring-emerald-500 dark:ring-opacity-15 ring-opacity-15 shadow-md hover:shadow-xl">
+        <Card className="w-[350px] hover:scale-105 transition ease-in-out duration-500 hover:ring-2 hover:ring-emerald-500 ring-opacity-15 shadow-md hover:shadow-xl">
             <CardContent className="p-0">
                 <div className="aspect-w-1 aspect-h-1 overflow-hidden">
-                    <img src={imageSrc}
-                        alt={title}
-                        className="object-cover w-full h-full rounded-t-lg"
-                    />
+                    <Link to={`/projects/${name}`}>
+                        <img src={imageSrc}
+                            alt={title}
+                            className="object-cover w-full h-full rounded-t-lg"
+                        />
+                    </Link>
                 </div>
             </CardContent>
             <CardFooter className="flex flex-col items-center justify-center p-4 rounded-b-lg">
@@ -25,7 +27,7 @@ const ProjectCard = ({ imageSrc, title, hoverTitle, description, date, technolog
                         <span className="inline-flex items-center h-10 space-x-2">
                             <span className="text-xl text-foreground pl-3"><Link to={`/projects/${name}`}>{title}</Link></span>
                             <Button variant="text" className="text-xl text-foreground p-0">
-                                <Info size="14px" color="grey"/>
+                                <Info size="14px" color="grey" />
                             </Button>
                         </span>
                     </HoverCardTrigger>
