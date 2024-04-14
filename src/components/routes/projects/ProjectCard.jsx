@@ -4,6 +4,7 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CalendarDays } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { Info } from 'lucide-react';
 
 
 const ProjectCard = ({ imageSrc, title, hoverTitle, description, date, technologies }) => {
@@ -13,14 +14,19 @@ const ProjectCard = ({ imageSrc, title, hoverTitle, description, date, technolog
                 <div className="aspect-w-1 aspect-h-1 overflow-hidden">
                     <img src={imageSrc}
                         alt={title}
-                        className="object-cover w-full h-full rounded-t-lg" 
-                        />
+                        className="object-cover w-full h-full rounded-t-lg"
+                    />
                 </div>
             </CardContent>
             <CardFooter className="flex flex-col items-center justify-center p-4 rounded-b-lg">
                 <HoverCard>
                     <HoverCardTrigger asChild>
-                        <Button variant="text" className="text-xl text-foreground">{title}</Button>
+                        <span className="inline-flex items-center h-10 space-x-2">
+                            <span className="text-xl text-foreground pl-3">{title}</span>
+                            <Button variant="text" className="text-xl text-foreground p-0">
+                                <Info size="14px" color="grey"/>
+                            </Button>
+                        </span>
                     </HoverCardTrigger>
                     <HoverCardContent className="w-80 p-4 shadow-lg rounded-md opacity-90">
                         <div className="space-y-2">
