@@ -10,9 +10,9 @@ function Home() {
     return (
         <>
             <div className="w-full h-full flex items-center justify-center">
-                <div className="text-center w-full h-[100vh] pt-12 mt-8 md:mt-0 flex flex-col items-center p-1 md:p-20">
+                <div className="text-center w-full h-[100vh] md:pt-15 mt-8 md:mt-0 flex flex-col items-center p-1 md:p-20">
                     <Avatar
-                        className="rounded-full w-[200px] h-[200px] mb-6 sm:w-24 sm:h-24 md:w-full md:h-auto md:mb-2 lg:mb-0 ring-1 ring-primary lg:w-48 lg:h-48">
+                        className="rounded-full w-[200px] h-[200px] mb-6 sm:w-75 sm:h-auto md:w-[200px] md:h-auto md:mb-2 lg:mb-0 ring-1 ring-primary lg:w-48 lg:h-48">
                         <AvatarImage src="./avatar.png" />
                         <AvatarFallback>SA</AvatarFallback>
                     </Avatar>

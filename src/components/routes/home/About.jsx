@@ -20,7 +20,7 @@ function About() {
                 <h1 className="text-white font-bold text-3xl mb-4 lg:mt-[125px]">
                     About Me
                 </h1>
-                <h3 className='font-bold text-xl'> Based in Manchester, England<span role="img" aria-label="Location"> 📍</span></h3>
+                <h3 className='font-bold text-lg'> Based in Manchester, England<span role="img" aria-label="Location"> 📍</span></h3>
                 <p className="mb-6 leading-relaxed text-base">
                     I'm a junior full stack developer with a passion for technology and creativity. I'm currently seeking an entry-level role in software development. I acquired a bachelor’s degree in Software Engineering and then completed a comprehensive Full-Stack bootcamp.
                 </p>
@@ -28,8 +28,9 @@ function About() {
                 <p className="mb-6 leading-relaxed text-base">
                     From a young age, I've been fascinated by creative arts, exploring photography, videography, and graphic design through school and beyond.
                 </p>
-                <Button href="/projects" className="inline-flex items-center justify-center w-44 md:w-auto px-6 py-2 md:text-base text-md rounded-md font-semibold lg:text-lg lg:mb-6 transition ease-in-out">
-                    <Link to={"/projects"}>See Portfolio <ChevronRight aria-label="Right arrow" /></Link>
+                <Button href="/projects" className="inline-flex flex-row items-center justify-center w-44 md:w-auto px-4 py-2 md:text-base text-md rounded-md font-semibold lg:text-lg lg:mb-6 transition ease-in-out">
+                    <Link to={"/projects"}>See Portfolio</Link>
+                    <ChevronRight aria-label="Right arrow" />
                 </Button>
             </div>
         </div>

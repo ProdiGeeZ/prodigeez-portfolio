@@ -2,7 +2,7 @@ export const projects = [
     {
         name: "pairsniper",
         title: "PairSniper",
-        description: "PairSniper is an advanced trading analytics platform which was custom-built for a private client. It automates complex calculations which were previously performed by the client himself manually. The application uses real-time data from market exchanges and provides a visual display of the results through the website. This allows the client to capitalise on more opportunities as the time lost from calculating is automated, giving him more time to focus on evaluating potential trades. ",
+        description: "PairSniper is a custom-built trading analytics platform that automates complex data aggregation from market exchanges, previously done manually by the client. It presents real-time data visually, allowing the client to focus more on evaluating trades and capitalise on opportunities by reducing calculation time.",
         images: [],
         githubLink: [
             "https://github.com/prodigeez",

@@ -7,7 +7,6 @@ import Projects from './components/routes/projects/Projects';
 import ProjectView from './components/routes/projectview/ProjectView';
 import Sidebar from './components/custom/SideBar';
 
-
 function App() {
 
   return (

@@ -23,7 +23,7 @@ function Projects() {
                     hoverTitle="Full Stack - API & Front End Client"
                     description="Cryptocurrency analytic tool with a self maintaining database. Pulls and formats live data from CoinMarketCap API."
                     date="January 2024 - Ongoing"
-                    technologies={['vercel', 'react', 'express', 'postgres', 'supabase', 'MUI', 'Tailwind', 'Render']}
+                    technologies={['node', 'react', 'express', 'postgres', 'supabase', 'MUI', 'Tailwind', 'Render', 'vercel']}
                 />
                 <ProjectCard
                     imageSrc="./squareup.svg"
