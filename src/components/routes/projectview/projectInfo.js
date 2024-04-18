@@ -5,34 +5,36 @@ export const projects = [
         "description": "PairSniper is a customized trading analytics platform that automates data aggregation from market exchanges. It visualizes real-time data to help users focus on strategy and capitalize on opportunities efficiently. Designed for scalability, it initially catered to a specific client's trading strategy.",
         "initialSituation": "The client had a unique trading strategy which proved successful. However, it labor-intensive and prone to errors, leading to missed trading opportunities.",
         "problemIdentification": "There was a need for an automated system that could handle complex data-handling and ensure fast, accurate data retrieval for effective trading strategy execution.",
+        date:"January 2024 - Ongoing",
         "tech": {
             "languages": [
                 "JavaScript",
-                "SQL"           
+                "SQL"
             ],
             "frameworks": [
-                "React",        
-                "Tailwind",     
-                "Express",      
-                "Node"          
+                "React",
+                "Tailwind",
+                "Express",
+                "Node"
             ],
             "tools": [
-                "Supabase",     
-                "Vercel",       
-                "Postgres",     
-                "Render",       
-                "Figma", 
+                "Supabase",
+                "Vercel",
+                "Postgres",
+                "Render",
+                "Figma",
                 "Excalidraw",
-                "PhotoShop",    
-                "Todoist"       
+                "PhotoShop",
+                "Todoist"
             ]
         },
-        "implementation": {
-            "dataSource": "Started with the Binance API for an MVP, transitioning to CoinMarketCap API to improve scalability and data reach. Used live API data to test the system’s handling of complex datasets.",
-            "techStack": "Initially used Node.js, Express, PostgreSQL, React, ElephantSQL, and Firebase. Switched to Supabase to enhance scalability and integrate services.",
-            "methodology": "Applied Agile methodologies to ensure flexibility and quick adaptation to client feedback. This was paired with a Kanban system with Todoist for efficient task tracking and milestone management.",
-            "design": "Began with client-approved wireframes using Figma and Excalidraw, followed by UI and schema refinements to accommodate evolving data structures."
-        },
+        implementation: [
+            "Implemented Agile methodologies and utilized a Kanban system for efficient task tracking.",
+            "Developed wireframes using Figma/Excalidraw, refining UI and schema as needed.",
+            "Initially used Node.js, Express, PostgreSQL, React, ElephantSQL, and Firebase, later transitioning to Supabase for enhanced scalability.",
+            "Started with Binance API, later migrated to CoinMarketCap API for improved scalability.",
+            "Tested system's handling of complex datasets using live API data."
+        ],
         "results": [
             "Enhanced system efficiency and reduced operational costs by segregating data retrieval from backend processes.",
             "Accelerated strategy execution by reducing data update intervals to one minute.",

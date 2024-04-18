@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { projects } from './projectInfo';
-import { User } from 'lucide-react';
+import { CalendarDays, User } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa';
 import { Button } from '@/components/ui/button';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
@@ -47,13 +47,12 @@ function ProjectView() {
                 </Breadcrumb>
             </div>
             <div className="w-full flex justify-center">
-                <div className="w-full md:w-5/6 justify-center">
-                    <h1 className="text-3xl lg:text-5xl font-bold mb-4 text-center  md:text-left">
+                <div className="w-full md:w-5/6 lg:w-[80%] justify-center">
+                    <h1 className="text-3xl lg:text-5xl font-bold mb-4 text-center md:text-left lg:mb-0">
                         {projectInfo.title}
                     </h1>
-
                     {images && images.length > 0 ? (
-                        <div className='w-full p-0 md:p-[0.05rem]'>
+                        <div className='w-full p-0 md:p-[2rem] lg:p-[3rem] lg:pb-6 overflow-hidden lg:pt-8'>
                             <>
                                 <Carousel>
                                     <CarouselPrevious />
@@ -66,9 +65,14 @@ function ProjectView() {
                                     </CarouselContent>
                                     <CarouselNext />
                                 </Carousel>
-                                <Button onClick={toggleDarkMode} className="my-2 mb-0 mx-2 md:mx-0">
-                                    {darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
-                                </Button>
+                                <div className='w-full flex justify-between mb-3'>
+                                    <span className="text-sm md:text-lg pt-1 md:pt-5 lg:pt-2 xl:pt-0 text-gray-200 inline-flex h-100% items-center ml-4 w-text-prose">
+                                        <CalendarDays className="mr-2 h-4 w-4 opacity-70" /> {projectInfo.date}
+                                    </span>
+                                    <Button onClick={toggleDarkMode} className="my-2 mb-0 mx-2 md:mx-0">
+                                        {darkMode ? 'View Light Mode' : 'View Dark Mode'}
+                                    </Button>
+                                </div>
                             </>
                         </div>
                     ) : (
@@ -76,104 +80,74 @@ function ProjectView() {
                     )}
                 </div>
             </div>
-            <div className="w-full flex justify-center">
-                <div className="w-4/5 m-10 mt-8">
-                    <div className="m-2 mt-0 mb-8">
-                        <h2 className="text-2xl font-bold">Project Summary</h2>
-                        <p className="text-lg leading-7">
-                            {projectInfo.description}
-                        </p>
+            <div className="w-full flex flex-col p-4 pt-0 lg:w-[70%] mx-auto">
+                <h2 className="text-2xl font-bold pb-2">Project Summary</h2>
+                <p className="text-base md:text-xl leading-7 mb-0">
+                    {projectInfo.description}
+                </p>
+            </div>
+            <div className='w-full flex justify-center  items-center p-4'>
+                <div className="m-w-full w-screen grid grid-cols-1 md:grid-cols-3 grid-rows-auto md:grid-rows-2 gap-5 lg:w-[70%] shrink">
+                    <div className="col-span-3 md:col-span-3 lg:col-span-3 xl:col-span-1 row-span-1">
+                        <div className="border border-gray-200 rounded-lg shadow-md p-6 flex flex-col h-full">
+                            <h3 className="text-xl font-bold">Problem Statement</h3>
+                            <p className="text-base md:text-lg md:pt-4 lg:pt-6">{projectInfo.initialSituation}</p>
+                        </div>
                     </div>
-                    <div className="flex flex-col lg:flex-row justify-between">
-                        <div className="lg:w-2/3 flex flex-col lg:flex-row gap-8">
-                            <div className="lg:w-1/2 px-2">
-                                <div className="">
-                                    <h3 className="text-xl font-bold">
-                                        Problem Statement
-                                    </h3>
-                                    <p className="text-lg">
-                                        {projectInfo.initialSituation}
-                                    </p>
-                                </div>
-                                <div className="mt-4">
-                                    <h3 className="text-xl font-bold">
-                                        Solution
-                                    </h3>
-                                    <p className="text-lg">
-                                        {projectInfo.problemIdentification}
-                                    </p>
-                                </div>
-                                <div className="mt-4">
-                                    <h3 className="text-xl font-bold">
-                                        Project Management
-                                    </h3>
-                                    <p className="text-lg">
-                                        {projectInfo.implementation.methodology}
-                                    </p>
-                                </div>
+                    <div className="col-span-3 md:col-span-3 lg:col-span-3 xl:col-span-1 row-span-1">
+                        <div className="border border-gray-200 rounded-lg shadow-md p-6 flex flex-col h-full">
+                            <h3 className="text-xl font-bold">Solution</h3>
+                            <p className="text-md md:text-lg md:pt-4 lg:pt-6">{projectInfo.problemIdentification}</p>
+                        </div>
+                    </div>
+                    <div className="col-span-3 md:col-span-3 lg:col-span-3 xl:col-span-1 row-span-1">
+                        <div className="border border-gray-200 rounded-lg shadow-md p-6 flex flex-col h-full">
+                            <div>
+                                <h3 className="font-semibold">Languages:</h3>
+                                <p>{projectInfo.tech.languages.join(', ')}</p>
                             </div>
-                            <div className="lg:w-1/2 px-2">
-                                <div className="">
-                                    <h3 className="text-xl font-bold">
-                                        Design
-                                    </h3>
-                                    <p className="text-lg">
-                                        {projectInfo.implementation.design}
-                                    </p>
-                                </div>
-                                <div className="mt-4">
-                                    <h3 className="text-xl font-bold">Choice of Technology</h3>
-                                    <p className="text-lg">
-                                        {projectInfo.implementation.techStack}
-                                    </p>
-                                </div>
-                                <div className="mt-4">
-                                    <h3 className="text-xl font-bold">Initial Approach</h3>
-                                    <p className="text-lg">
-                                        {projectInfo.implementation.dataSource}
-                                    </p>
-                                </div>
+                            <div className="mt-2">
+                                <h3 className="font-semibold">Frameworks:</h3>
+                                <p>{projectInfo.tech.frameworks.join(', ')}</p>
+                            </div>
+                            <div className="mt-2">
+                                <h3 className="font-semibold">Tools:</h3>
+                                <p>{projectInfo.tech.tools.join(', ')}</p>
                             </div>
                         </div>
-                        <aside className="lg:w-1/3 lg:pl-8 mt-4 lg:mt-0">
-                            <div className="p-4 border border-gray-200 rounded-lg shadow-md">
-                                <h2 className="text-xl font-bold mb-2">Technologies</h2>
-                                <div className="p-2 pt-0">
-                                    <div>
-                                        <h3 className="font-semibold">Languages:</h3>
-                                        <p>{projectInfo.tech.languages.join(', ')}</p>
+                    </div>
+                    <div className="col-span-3 lg:col-span-3 xl:col-span-2 row-span-1">
+                        <div className="border border-gray-200 rounded-lg shadow-md p-6 flex flex-col h-full">
+                            <h3 className="text-2xl font-bold">Approach</h3>
+                            <ul className="text-lg p-4 grow">
+                                {projectInfo.implementation.map((item, index) => (
+                                    <li key={index} className="text-base list-disc">{item}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+                    <div className="col-span-3 lg:col-span-3 xl:col-span-1 row-span-1">
+                        <div className="border border-gray-200 rounded-lg shadow-md p-6 flex flex-col h-full">
+                            <h2 className="text-2xl font-bold mb-2">Collaborators</h2>
+                            {projectInfo.collaborators.map((collaborator, index) => (
+                                <div key={index} className="flex flex-col mb-4">
+                                    <div className="flex items-center gap-2">
+                                        <User className="h-6 w-6" />
+                                        <span className="flex-grow">
+                                            {collaborator.name}
+                                        </span>
+                                        {collaborator.profile && (
+                                            <a href={collaborator.profile} target="_blank" rel="noopener noreferrer">
+                                                <FaGithub className="h-6 w-6" />
+                                            </a>
+                                        )}
                                     </div>
-                                    <div className="mt-2">
-                                        <h3 className="font-semibold">Frameworks:</h3>
-                                        <p>{projectInfo.tech.frameworks.join(', ')}</p>
-                                    </div>
-                                    <div className="mt-2">
-                                        <h3 className="font-semibold">Tools:</h3>
-                                        <p>{projectInfo.tech.tools.join(', ')}</p>
-                                    </div>
+                                    <span className="text-sm text-gray-500 mt-1">
+                                        {collaborator.role}
+                                    </span>
                                 </div>
-                            </div>
-                            <div className="mt-6 ">
-                                <div className="p-4 border border-gray-200 rounded-lg shadow-md">
-                                    <h2 className="text-2xl font-bold mb-2">
-                                        Collaborators
-                                    </h2>
-                                    {projectInfo.collaborators.map((collaborator, index) => (
-                                        <div key={index} className="flex justify-start items-center gap-2 mb-2">
-                                            <User className="h-6 w-6" />
-                                            <span>
-                                                {collaborator.name} - {collaborator.role}
-                                            </span>
-                                            {collaborator.profile && (
-                                                <a href={collaborator.profile} target="_blank" rel="noopener noreferrer">
-                                                    <FaGithub className="h-6 w-6" />
-                                                </a>
-                                            )}
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        </aside>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>

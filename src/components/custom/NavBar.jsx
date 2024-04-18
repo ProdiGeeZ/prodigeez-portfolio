@@ -13,8 +13,8 @@ import { Link } from "react-router-dom";
 
 function NavBar() {
     return (
-        <header className="">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <header className="max-w-screen">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
                 <div className="flex justify-between items-center py-6 md:justify-start">
                     <div className="flex justify-start lg:w-0 lg:flex-1">
                         <a href="/" className="text-xl md:text-2xl font-bold text-primary transition-all" >
