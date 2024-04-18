@@ -13,8 +13,8 @@ function Home() {
                 <div className="text-center w-full h-[100vh] md:pt-15 mt-8 md:mt-0 flex flex-col items-center p-1 md:p-20">
                     <Avatar
                         className="rounded-full w-[200px] h-[200px] mb-6 sm:w-75 sm:h-auto md:w-[200px] md:h-auto md:mb-2 lg:mb-0 ring-1 ring-primary lg:w-48 lg:h-48">
-                        <AvatarImage src="./avatar.png" />
-                        <AvatarFallback>SA</AvatarFallback>
+                        <AvatarImage src="https://waltibmozphnocxzjzxf.supabase.co/storage/v1/object/public/personal/avatar.png?t=2024-04-18T18%3A45%3A19.706Z" />
+                        <AvatarFallback><h1 className="text-2xl">SA</h1></AvatarFallback>
                     </Avatar>
                     <h1 className="text-5xl md:text-7xl lg:text-7xl lg:mb-6 font-bold md:pt-4 lg:pt-6 mb-3 text-primary">Hi, I'm Saabir.</h1>
                     <h2 className="text-xl md:text-2xl lg:text-3xl font-bold lg:mb-4">Junior Software Engineer</h2>
