@@ -1,45 +1,64 @@
 export const projects = [
     {
-        name: "pairsniper",
-        title: "PairSniper",
-        description: "PairSniper is a custom-built trading analytics platform that automates complex data aggregation from market exchanges, previously done manually by the client. It presents real-time data visually, allowing the client to focus more on evaluating trades and capitalise on opportunities by reducing calculation time.",
-        images: [],
-        githubLink: [
+        "name": "pairsniper",
+        "title": "PairSniper Analytics",
+        "description": "PairSniper is a customized trading analytics platform that automates data aggregation from market exchanges. It visualizes real-time data to help users focus on strategy and capitalize on opportunities efficiently. Designed for scalability, it initially catered to a specific client's trading strategy.",
+        "initialSituation": "The client had a unique trading strategy which proved successful. However, it labor-intensive and prone to errors, leading to missed trading opportunities.",
+        "problemIdentification": "There was a need for an automated system that could handle complex data-handling and ensure fast, accurate data retrieval for effective trading strategy execution.",
+        "implementation": {
+            "dataSource": "Started with the Binance API for an MVP, transitioning to CoinMarketCap API to improve scalability and data reach. Used live API data to test the system’s handling of complex datasets.",
+            "techStack": "Initially used Node.js, Express, PostgreSQL, React, ElephantSQL, and Firebase. Switched to Supabase to enhance scalability and integrate services.",
+            "methodology": "Applied Agile methodologies to ensure flexibility and quick adaptation to client feedback. This was paired with a Kanban system with Todoist for efficient task tracking and milestone management.",
+            "design": "Began with client-approved wireframes using Figma and Excalidraw, followed by UI and schema refinements to accommodate evolving data structures."
+        },
+        "results": [
+            "Enhanced system efficiency and reduced operational costs by segregating data retrieval from backend processes.",
+            "Accelerated strategy execution by reducing data update intervals to one minute.",
+            "Developed a standalone API to support scalability and versatility across multiple applications."
+        ],
+        "reflectionsAndFutureDirections": [
+            "Plan to improve cron job efficiency and database operations to boost system scalability.",
+            "Aim to optimize data cleaning processes for enhanced performance."
+        ],
+        "images": {
+            dark: [
+                "https://waltibmozphnocxzjzxf.supabase.co/storage/v1/object/public/assets-dark/1.jpg?t=2024-04-17T19%3A55%3A41.279Z",
+                "https://waltibmozphnocxzjzxf.supabase.co/storage/v1/object/public/assets-dark/2.jpg?t=2024-04-17T19%3A57%3A17.072Z",
+                "https://waltibmozphnocxzjzxf.supabase.co/storage/v1/object/public/assets-dark/3.jpg?t=2024-04-17T19%3A57%3A36.386Z",
+                "https://waltibmozphnocxzjzxf.supabase.co/storage/v1/object/public/assets-dark/4.jpg",
+                "https://waltibmozphnocxzjzxf.supabase.co/storage/v1/object/public/assets-dark/m.jpg?t=2024-04-17T19%3A57%3A52.221Z",
+                "https://waltibmozphnocxzjzxf.supabase.co/storage/v1/object/public/assets-dark/s.jpg?t=2024-04-17T19%3A58%3A29.604Z",
+                "https://waltibmozphnocxzjzxf.supabase.co/storage/v1/object/public/assets-dark/v.jpg?t=2024-04-17T19%3A58%3A36.822Z"
+            ],
+            light: [
+                "https://waltibmozphnocxzjzxf.supabase.co/storage/v1/object/public/assets/1.jpg?t=2024-04-17T19%3A59%3A27.481Z",
+                "https://waltibmozphnocxzjzxf.supabase.co/storage/v1/object/public/assets/2.jpg?t=2024-04-17T20%3A00%3A22.790Z",
+                "https://waltibmozphnocxzjzxf.supabase.co/storage/v1/object/public/assets/3.jpg?t=2024-04-17T20%3A00%3A27.641Z",
+                "https://waltibmozphnocxzjzxf.supabase.co/storage/v1/object/public/assets/4.jpg?t=2024-04-17T20%3A00%3A32.782Z",
+                "https://waltibmozphnocxzjzxf.supabase.co/storage/v1/object/public/assets/m.jpg?t=2024-04-17T20%3A00%3A38.029Z",
+                "https://waltibmozphnocxzjzxf.supabase.co/storage/v1/object/public/assets/s.jpg?t=2024-04-17T20%3A00%3A48.090Z",
+                "https://waltibmozphnocxzjzxf.supabase.co/storage/v1/object/public/assets/v.jpg?t=2024-04-17T20%3A00%3A52.703Z"
+            ]
+        },
+        "githubLink": [
             "https://github.com/prodigeez",
             "https://github.com/kylexpowis",
             "https://github.com/orgs/Kaizen-Development/people/imaa04"
         ],
-        collaborators: [
+        "collaborators": [
             {
-                name: "Saabir",
-                role: "Lead Developer"
+                "name": "Kyle Powis",
+                "role": "Project Manager, Developer",
+                "profile": "https://github.com/kylexpowis"
             },
             {
-                name: "Kyle Powis",
-                role: "Project Manager, Developer",
-                profile: "https://github.com/kylexpowis",
-            },
-            {
-                name: "Ima Khan",
-                role: "Developer"
+                "name": "Ima Khan",
+                "role": "Developer",
+                "profile": "https://github.com/imaa04"
             }
         ],
-        linkToSite: "Pending, demo under development",
-        videoLink: "",
-        initialSituation: "The client had developed a unique and successful trading strategy, which proved successful in his trading activities. However, the manual process of calculations was time-consuming and error-prone, often leading to missed opportunities. The client's requirement was clear: 'I want to trade without looking at a graph.'",
-        "problemIdentification": "The client needed a system that could automate these complex calculations and handle fast, accurate data fetching to streamline trading strategy implementation.",
-        solutionStrategy: {
-            "technologyChoice": "The project started with the Binance API but switched to the CoinMarketCap API to access a more comprehensive dataset. Technologies utilised included Node.js, Express, PostgreSQL, React, and Supabase.",
-            "developmentApproach": "The team adopted an iterative development process, producing several MVPs that evolved based on continuous real-time testing and client feedback. This approach led to a refined beta version, optimizing both functionality and user experience.",
-            "dataHandling": "Data handling challenges were addressed through scheduled cron jobs for regular data maintenance, ensuring continuous synchronization with live market data and the database’s accuracy."
-        },
-        implementationDetails: {
-            Approach: "We initially used the Binance API to fetch data but later switched to the CoinMarketCap API for a more comprehensive dataset. The development stack included Node.js, Express, PostgreSQL, and React, transitioning to Supabase for enhanced real-time capabilities and data management. By adopting Agile methodology, our team could stay flexible and responsive to the client’s feedback and evolving needs. We employed a Kanban system using Todoist to manage tasks effectively. This tool helped us visualise our workflow, track progress, and manage tickets efficiently, ensuring all team members were aligned and could collaborate effectively. In the planning phase, we drew algorithms for the cron jobs essential for database updates and designed wireframes using Figma and Excalidraw to visualize the application’s UI and endpoint structures. To ensure our tests were effective, we used live data from APIs instead of mock data, because of the complexity of the dataset. The project went through a series of iterative cycles, producing multiple versions that were refined based on continuous client feedback and real-time testing. This process brought the system to a beta version, significantly enhancing functionality and user experience.",
-            Challenges: "We addressed data management challenges by implementing cron jobs that maintained data accuracy and timeliness. The cron jobs were hosted separately from the main API to reduce the load and ensure rapid data synchronisation, achieving updates within 60 seconds to mirror real-time market changes accurately.",
-            "safetyAndIntegrity": "The application's security and data integrity are handled with robust authentication measures and real-time updates via Supabase."
-        },
-        outcome: "By decoupling data fetching from backend operations, we optimised performance and significantly cut operational costs. The automation significantly improved data processing speed and accuracy, reducing update times from 10 minutes in our first version, to under 5 minutes in our second, and eventually to just 60 seconds in the final MVP. These improvements enabled the client to make faster, more informed decisions, maximising the effectiveness of their trading strategy.",
-        reflectionsAndFutureDirections: "The team plans to continue improving data handling and scalability, including enhancing cron job efficiency and refining database operations to manage increasing data volumes. Continuous adjustments will be made to improve data cleaning processes and overall performance. Although Supabase provides a direct API for database interactions, we built a standalone API to potentially scale into a suite of applications for different future use cases. We are still actively developing and maintaining the project as the client plans further enhancements."
+        "linkToSite": "Pending, demo under development",
+        "videoLink": ""
     },
     {
         title: '',
