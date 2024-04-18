@@ -5,6 +5,28 @@ export const projects = [
         "description": "PairSniper is a customized trading analytics platform that automates data aggregation from market exchanges. It visualizes real-time data to help users focus on strategy and capitalize on opportunities efficiently. Designed for scalability, it initially catered to a specific client's trading strategy.",
         "initialSituation": "The client had a unique trading strategy which proved successful. However, it labor-intensive and prone to errors, leading to missed trading opportunities.",
         "problemIdentification": "There was a need for an automated system that could handle complex data-handling and ensure fast, accurate data retrieval for effective trading strategy execution.",
+        "tech": {
+            "languages": [
+                "JavaScript",
+                "SQL"           
+            ],
+            "frameworks": [
+                "React",        
+                "Tailwind",     
+                "Express",      
+                "Node"          
+            ],
+            "tools": [
+                "Supabase",     
+                "Vercel",       
+                "Postgres",     
+                "Render",       
+                "Figma", 
+                "Excalidraw",
+                "PhotoShop",    
+                "Todoist"       
+            ]
+        },
         "implementation": {
             "dataSource": "Started with the Binance API for an MVP, transitioning to CoinMarketCap API to improve scalability and data reach. Used live API data to test the system’s handling of complex datasets.",
             "techStack": "Initially used Node.js, Express, PostgreSQL, React, ElephantSQL, and Firebase. Switched to Supabase to enhance scalability and integrate services.",
