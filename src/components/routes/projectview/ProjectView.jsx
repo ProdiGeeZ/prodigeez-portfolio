@@ -60,7 +60,7 @@ function ProjectView() {
                                     <CarouselContent>
                                         {images.map((image, index) => (
                                             <CarouselItem key={index}>
-                                                <img src={image} alt={`Slide ${index + 1}`} className="w-full md:rounded-xl shadow-md" style={{ height: 'auto', objectFit: 'cover', borderRadius: 12 }} />
+                                                <img src={image} alt={`Slide ${index + 1}`} className="w-full rounded-none md:rounded-xl shadow-md" style={{ height: 'auto', objectFit: 'cover', borderRadius: 12 }} />
                                             </CarouselItem>
                                         ))}
                                     </CarouselContent>
@@ -103,12 +103,12 @@ function ProjectView() {
                 </p>
             </div>
             <div className='w-full flex justify-center  items-center p-4'>
-                <div className="m-w-full w-screen grid grid-cols-1 md:grid-cols-3 grid-rows-auto md:grid-rows-2 gap-5 lg:w-[70%] shrink">
+                <div className="mx-auto w-full lg:w-[70%] grid grid-cols-1 md:grid-cols-3 grid-rows-1 gap-5 items-start lg:items-stretch">
                     <div className="col-span-3 md:col-span-3 lg:col-span-3 xl:col-span-3 row-span-1">
                         <div className="border border-gray-200 rounded-lg shadow-md p-6 flex flex-col h-full">
                             <h3 className="text-2xl font-bold pb-1">Project Status / Outcome:</h3>
                             <Separator />
-                            <ul className="text-lg p-4 grow">
+                            <ul className="text-lg p-4 md:pt-0  grow">
                                 {projectInfo.results.map((item, index) => (
                                     <li key={index} className="text-base list-disc pt-2">{item}</li>
                                 ))}
@@ -119,14 +119,14 @@ function ProjectView() {
                         <div className="border border-gray-200 rounded-lg shadow-md p-6 flex flex-col h-full">
                             <h3 className="text-xl font-bold">Problem Statement</h3>
                             <Separator />
-                            <p className="text-base md:text-lg md:pt-4 lg:pt-6">{projectInfo.initialSituation}</p>
+                            <p className="text-md md:text-lg md:pt-2 lg:pt-2 xl:pt-4 h-fit">{projectInfo.initialSituation}</p>
                         </div>
                     </div>
                     <div className="col-span-3 md:col-span-3 lg:col-span-3 xl:col-span-1 row-span-1">
                         <div className="border border-gray-200 rounded-lg shadow-md p-6 flex flex-col h-full">
                             <h3 className="text-xl font-bold">Solution</h3>
                             <Separator />
-                            <p className="text-md md:text-lg md:pt-4 lg:pt-6 xl:pt-5">{projectInfo.problemIdentification}</p>
+                            <p className="text-md md:text-lg md:pt-2 lg:pt-2 xl:pt-4">{projectInfo.problemIdentification}</p>
                         </div>
                     </div>
                     <div className="col-span-3 md:col-span-3 lg:col-span-3 xl:col-span-1 row-span-1">
