@@ -2,7 +2,7 @@ export const projects = [
     {
         "name": "pairsniper",
         "title": "PairSniper Analytics",
-        "description": "PairSniper is a customized trading analytics platform that automates data aggregation from market exchanges. It visualizes real-time data to help users focus on strategy and capitalize on opportunities efficiently. Designed for scalability, it initially catered to a specific client's trading strategy.",
+        "description": "PairSniper is a customised trading analytics platform that automates data aggregation from market exchanges. It visualises real-time data to help users focus on strategy and capitalise on opportunities efficiently. Designed for scalability, it initially catered to a specific client's trading strategy.",
         "initialSituation": "The client had a unique trading strategy which proved successful. However, it labor-intensive and prone to errors, leading to missed trading opportunities.",
         "problemIdentification": "There was a need for an automated system that could handle complex data-handling and ensure fast, accurate data retrieval for effective trading strategy execution.",
         date:"January 2024 - Ongoing",
@@ -15,7 +15,8 @@ export const projects = [
                 "React",
                 "Tailwind",
                 "Express",
-                "Node"
+                "Node",
+                "Jest"
             ],
             "tools": [
                 "Supabase",
@@ -29,16 +30,17 @@ export const projects = [
             ]
         },
         implementation: [
-            "Implemented Agile methodologies and utilized a Kanban system for efficient task tracking.",
+            "Implemented Agile methodologies and utilised a Kanban system for efficient task tracking.",
             "Developed wireframes using Figma/Excalidraw, refining UI and schema as needed.",
             "Initially used Node.js, Express, PostgreSQL, React, ElephantSQL, and Firebase, later transitioning to Supabase for enhanced scalability.",
-            "Started with Binance API, later migrated to CoinMarketCap API for improved scalability.",
-            "Tested system's handling of complex datasets using live API data."
+            "Started with Binance API, later migrated to CoinMarketCap API for improved scalability, reliance, and increased data coverage.",
+            "Tested system's handling of complex datasets using live API data by building a seed generation function."
         ],
         "results": [
-            "Enhanced system efficiency and reduced operational costs by segregating data retrieval from backend processes.",
-            "Accelerated strategy execution by reducing data update intervals to one minute.",
-            "Developed a standalone API to support scalability and versatility across multiple applications."
+            "Developed a scalable REST API using Express and Node, with TDD practices via the Jest library. ",
+            "Implemented a self-maintaining database with Supabase that updates in real-time and pulls market data every 60 seconds, using hosted cron functions for maintenance and updates.",
+            "Built a responsive front-end with React, MUI, and Tailwind, leveraging Supabase’s Real-Time feature for low-latency updates.",
+            " This solution significantly reduces manual labor and increases trading opportunities for private clients."
         ],
         "reflectionsAndFutureDirections": [
             "Plan to improve cron job efficiency and database operations to boost system scalability.",

@@ -9,6 +9,7 @@ import {
     Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage,
     BreadcrumbSeparator
 } from "@/components/ui/breadcrumb"
+import { Separator } from "@/components/ui/separator"
 import { Slash } from "lucide-react"
 
 function ProjectView() {
@@ -59,45 +60,73 @@ function ProjectView() {
                                     <CarouselContent>
                                         {images.map((image, index) => (
                                             <CarouselItem key={index}>
-                                                <img src={image} alt={`Slide ${index + 1}`} className="w-full md:rounded-xl" style={{ height: 'auto', objectFit: 'cover' }} />
+                                                <img src={image} alt={`Slide ${index + 1}`} className="w-full md:rounded-xl shadow-md" style={{ height: 'auto', objectFit: 'cover', borderRadius: 12 }} />
                                             </CarouselItem>
                                         ))}
                                     </CarouselContent>
                                     <CarouselNext />
                                 </Carousel>
                                 <div className='w-full flex justify-between mb-3'>
-                                    <span className="text-sm md:text-lg pt-1 md:pt-5 lg:pt-2 xl:pt-0 text-gray-200 inline-flex h-100% items-center ml-4 w-text-prose">
+                                    <span className="text-sm md:text-lg pt-1 md:pt-5 lg:pt-2 xl:pt-4 text-foreground inline-flex h-100% items-center ml-4 w-text-prose">
                                         <CalendarDays className="mr-2 h-4 w-4 opacity-70" /> {projectInfo.date}
                                     </span>
-                                    <Button onClick={toggleDarkMode} className="my-2 mb-0 mx-2 md:mx-0">
+                                    <Button onClick={toggleDarkMode} className="my-2 mb-0 mx-2 md:mx-0 shadow-md">
                                         {darkMode ? 'View Light Mode' : 'View Dark Mode'}
                                     </Button>
                                 </div>
+                                <Separator />
                             </>
                         </div>
                     ) : (
-                        <p>No images available</p>
+                        <div className='w-full p-0 md:p-[2rem] lg:p-[3rem] lg:pb-6 overflow-hidden lg:pt-8'>
+                            <div className="w-full h-[300px] md:h-[500px] bg-gray-200 border-2 border-dashed border-gray-400 rounded-xl flex items-center justify-center">
+                                <span className="text-xl md:text-3xl text-gray-500">No images found or images pending</span>
+                            </div>
+                            <div className='w-full flex justify-between mb-3'>
+                                <span className="text-sm md:text-lg pt-1 md:pt-5 lg:pt-2 xl:pt-4 text-foreground inline-flex h-100% items-center ml-4 w-text-prose">
+                                    <CalendarDays className="mr-2 h-4 w-4 opacity-70" /> {projectInfo.date}
+                                </span>
+                                <Button onClick={toggleDarkMode} className="my-2 mb-0 mx-2 md:mx-0 shadow-md">
+                                    {darkMode ? 'View Light Mode' : 'View Dark Mode'}
+                                </Button>
+                            </div>
+                            <Separator />
+                        </div>
                     )}
                 </div>
             </div>
             <div className="w-full flex flex-col p-4 pt-0 lg:w-[70%] mx-auto">
-                <h2 className="text-2xl font-bold pb-2">Project Summary</h2>
-                <p className="text-base md:text-xl leading-7 mb-0">
+                <h2 className="text-2xl font-bold pb-1">Project Summary</h2>
+                <Separator />
+                <p className="text-base md:text-xl leading-7 mt-2">
                     {projectInfo.description}
                 </p>
             </div>
             <div className='w-full flex justify-center  items-center p-4'>
                 <div className="m-w-full w-screen grid grid-cols-1 md:grid-cols-3 grid-rows-auto md:grid-rows-2 gap-5 lg:w-[70%] shrink">
+                    <div className="col-span-3 md:col-span-3 lg:col-span-3 xl:col-span-3 row-span-1">
+                        <div className="border border-gray-200 rounded-lg shadow-md p-6 flex flex-col h-full">
+                            <h3 className="text-2xl font-bold pb-1">Project Status / Outcome:</h3>
+                            <Separator />
+                            <ul className="text-lg p-4 grow">
+                                {projectInfo.results.map((item, index) => (
+                                    <li key={index} className="text-base list-disc pt-2">{item}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
                     <div className="col-span-3 md:col-span-3 lg:col-span-3 xl:col-span-1 row-span-1">
                         <div className="border border-gray-200 rounded-lg shadow-md p-6 flex flex-col h-full">
                             <h3 className="text-xl font-bold">Problem Statement</h3>
+                            <Separator />
                             <p className="text-base md:text-lg md:pt-4 lg:pt-6">{projectInfo.initialSituation}</p>
                         </div>
                     </div>
                     <div className="col-span-3 md:col-span-3 lg:col-span-3 xl:col-span-1 row-span-1">
                         <div className="border border-gray-200 rounded-lg shadow-md p-6 flex flex-col h-full">
                             <h3 className="text-xl font-bold">Solution</h3>
-                            <p className="text-md md:text-lg md:pt-4 lg:pt-6">{projectInfo.problemIdentification}</p>
+                            <Separator />
+                            <p className="text-md md:text-lg md:pt-4 lg:pt-6 xl:pt-5">{projectInfo.problemIdentification}</p>
                         </div>
                     </div>
                     <div className="col-span-3 md:col-span-3 lg:col-span-3 xl:col-span-1 row-span-1">
@@ -119,6 +148,7 @@ function ProjectView() {
                     <div className="col-span-3 lg:col-span-3 xl:col-span-2 row-span-1">
                         <div className="border border-gray-200 rounded-lg shadow-md p-6 flex flex-col h-full">
                             <h3 className="text-2xl font-bold">Approach</h3>
+                            <Separator />
                             <ul className="text-lg p-4 grow">
                                 {projectInfo.implementation.map((item, index) => (
                                     <li key={index} className="text-base list-disc">{item}</li>
@@ -128,7 +158,8 @@ function ProjectView() {
                     </div>
                     <div className="col-span-3 lg:col-span-3 xl:col-span-1 row-span-1">
                         <div className="border border-gray-200 rounded-lg shadow-md p-6 flex flex-col h-full">
-                            <h2 className="text-2xl font-bold mb-2">Collaborators</h2>
+                            <h2 className="text-2xl font-bold ">Collaborators</h2>
+                            <Separator className="mb-4" />
                             {projectInfo.collaborators.map((collaborator, index) => (
                                 <div key={index} className="flex flex-col mb-4">
                                     <div className="flex items-center gap-2">

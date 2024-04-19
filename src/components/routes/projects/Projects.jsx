@@ -14,7 +14,7 @@ function Projects() {
                     hoverTitle="Full Stack - API & Front End Client"
                     description="News API that serves mock news including articles and comments. Client application built with React."
                     date="November 2023 - December 2023"
-                    technologies={['node', 'react', 'express', 'postgres']}
+                    technologies={['node', 'react', 'express', 'postgres', 'jest']}
                 />
                 <ProjectCard
                     imageSrc="./pairsniper.svg"
@@ -23,7 +23,7 @@ function Projects() {
                     hoverTitle="Full Stack - API & Front End Client"
                     description="Cryptocurrency analytic tool with a self maintaining database. Pulls and formats live data from CoinMarketCap API."
                     date="January 2024 - Ongoing"
-                    technologies={['node', 'react', 'express', 'postgres', 'supabase', 'MUI', 'Tailwind', 'Render', 'vercel']}
+                    technologies={['node', 'react', 'express', 'postgres', 'supabase', 'MUI', 'Tailwind', 'Render', 'vercel', 'jest', 'figma', 'photoshop']}
                 />
                 <ProjectCard
                     imageSrc="./squareup.svg"
