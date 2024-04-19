@@ -1,16 +1,17 @@
-import ProjectCard from "./ProjectCard"
+import ProjectCard from "./ProjectCard";
 
 function Projects() {
     return (
         <div className="w-screen h-full flex flex-col justify-center items-center p-10">
             <div className="flex w-full my-10 justify-center items-center flex-col">
-                <h1 className="text-4xl font-bold decoration-1 underline underline-offset-4">Featured Projects</h1><br/>
+                <h1 className="text-4xl font-bold decoration-1 underline underline-offset-4">Featured Projects</h1><br />
+                <h5 className="text-xl text-gray-500 ">Hover over the titles for a quick summary😏</h5>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 <ProjectCard
                     imageSrc="./northcoders.svg"
                     title="NC News"
-                    name="northcoders"
+                    name="nc-news"
                     hoverTitle="Full Stack - API & Front End Client"
                     description="News API that serves mock news including articles and comments. Client application built with React."
                     date="November 2023 - December 2023"
@@ -28,11 +29,11 @@ function Projects() {
                 <ProjectCard
                     imageSrc="./squareup.svg"
                     title="Square Up"
-                    name="squareup"
-                    hoverTitle="Full Stack - API & Front End Client"
+                    name="square-up"
+                    hoverTitle="Mobile App & Firebase Backend"
                     description="Boardgame meet up app. Search for games events in your area. Host your own. Manage attendees."
                     date="December 2023 - January 2024"
-                    technologies={['expo','native', 'node', 'firebase', 'Kitten UI']}
+                    technologies={['expo','react native', 'node', 'firebase', 'Kitten UI']}
                 />
             </div>
         </div>

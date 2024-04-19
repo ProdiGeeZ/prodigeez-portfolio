@@ -11,8 +11,8 @@ function About() {
                 <div className="w-full md:p-20 lg:p-0 flex ">
                     <img
                         className="w-[100%] h-auto rounded-lg"
-                        src={"https://waltibmozphnocxzjzxf.supabase.co/storage/v1/object/public/personal/about.jpg"}
-                        alt="image of myself"
+                        src={"https://waltibmozphnocxzjzxf.supabase.co/storage/v1/object/public/personal/about.svg?t=2024-04-19T17%3A58%3A30.193Z"}
+                        alt="bitmoji-saabir"
                     />
                 </div>
             </div>

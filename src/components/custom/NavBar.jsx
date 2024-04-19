@@ -18,7 +18,7 @@ function NavBar() {
                 <div className="flex justify-between items-center py-6 md:justify-start">
                     <div className="flex justify-start lg:w-0 lg:flex-1">
                         <a href="/" className="text-xl md:text-2xl font-bold text-primary transition-all" >
-                            SAABIR.DEV
+                            <span className="inline-flex p-0 m-0 items-center"><img src="https://waltibmozphnocxzjzxf.supabase.co/storage/v1/object/public/personal/favicon.svg?t=2024-04-19T17%3A59%3A28.415Z" width={50} className="p-0 m-0"/><p className="">SAABIR.DEV</p></span>
                         </a>
                     </div>
                     <div className="md:hidden flex space-x-2 ">

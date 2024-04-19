@@ -8,9 +8,9 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import {
     Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage,
     BreadcrumbSeparator
-} from "@/components/ui/breadcrumb"
-import { Separator } from "@/components/ui/separator"
-import { Slash } from "lucide-react"
+} from "@/components/ui/breadcrumb";
+import { Separator } from "@/components/ui/separator";
+import { Slash } from "lucide-react";
 
 function ProjectView() {
     const { name } = useParams();
@@ -66,11 +66,11 @@ function ProjectView() {
                                     </CarouselContent>
                                     <CarouselNext />
                                 </Carousel>
-                                <div className='w-full flex justify-between mb-3'>
-                                    <span className="text-sm md:text-lg pt-1 md:pt-5 lg:pt-2 xl:pt-4 text-foreground inline-flex h-100% items-center ml-4 w-text-prose">
+                                <div className='w-full flex justify-between mb-3 items-center'>
+                                    <span className="text-md md:text-lg pt-1 md:pt-5 lg:pt-2 xl:pt-4 text-foreground inline-flex h-100% items-center ml-1 w-text-prose">
                                         <CalendarDays className="mr-2 h-4 w-4 opacity-70" /> {projectInfo.date}
                                     </span>
-                                    <Button onClick={toggleDarkMode} className="my-2 mb-0 mx-2 md:mx-0 shadow-md">
+                                    <Button onClick={toggleDarkMode} className="my-2 mb-0 mx-2 md:mx-0 shadow-md mr-1">
                                         {darkMode ? 'View Light Mode' : 'View Dark Mode'}
                                     </Button>
                                 </div>
@@ -79,23 +79,27 @@ function ProjectView() {
                         </div>
                     ) : (
                         <div className='w-full p-0 md:p-[2rem] lg:p-[3rem] lg:pb-6 overflow-hidden lg:pt-8'>
-                            <div className="w-full h-[300px] md:h-[500px] bg-gray-200 border-2 border-dashed border-gray-400 rounded-xl flex items-center justify-center">
-                                <span className="text-xl md:text-3xl text-gray-500">No images found or images pending</span>
+                            <div className="w-full h-[300px] md:h-[500px] bg-gray-background border-2 border-dashed border-gray-400 rounded-xl flex items-center justify-center flex-col">
+                                <span className="text-xl md:text-3xl text-gray-500">No images found / images pending</span>
+                                <span className="text-xl md:text-xl text-gray-400"> (probably pending though🙃)</span>
                             </div>
-                            <div className='w-full flex justify-between mb-3'>
-                                <span className="text-sm md:text-lg pt-1 md:pt-5 lg:pt-2 xl:pt-4 text-foreground inline-flex h-100% items-center ml-4 w-text-prose">
+                            <div className='w-full flex justify-between mb-3 items-center'>
+                                <span className="text-md md:text-lg pt-1 md:pt-5 lg:pt-2 xl:pt-4 text-foreground inline-flex h-100% items-center ml-1 w-text-prose">
                                     <CalendarDays className="mr-2 h-4 w-4 opacity-70" /> {projectInfo.date}
                                 </span>
-                                <Button onClick={toggleDarkMode} className="my-2 mb-0 mx-2 md:mx-0 shadow-md">
-                                    {darkMode ? 'View Light Mode' : 'View Dark Mode'}
-                                </Button>
+                                <span>
+                                        
+                                    <Button onClick={toggleDarkMode} className="my-2 mb-0 mx-2 md:mx-0 shadow-md mr-1">
+                                        {darkMode ? 'View Light Mode' : 'View Dark Mode'}
+                                    </Button>
+                                </span>
                             </div>
                             <Separator />
                         </div>
                     )}
                 </div>
             </div>
-            <div className="w-full flex flex-col p-4 pt-0 lg:w-[70%] mx-auto">
+            <div className="w-full flex flex-col p-4 pt-0 lg:w-[70%] mx-auto mt-2">
                 <h2 className="text-2xl font-bold pb-1">Project Summary</h2>
                 <Separator />
                 <p className="text-base md:text-xl leading-7 mt-2">
