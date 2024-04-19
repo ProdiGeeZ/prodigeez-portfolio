@@ -14,7 +14,7 @@ function About() {
                     alt="bitmoji-saabir"
                 />
             </div>
-            <div className="w-full flex-col justify-center h-auto md:flex md:w-full md:justify-center text-left p-10">
+            <div className="w-full flex-col justify-center h-auto md:flex md:w-[80%] md:justify-center text-left p-10">
                 <h1 className="text-white font-bold text-3xl mb-4">
                     About Me
                 </h1>
