@@ -40,7 +40,7 @@ export const projects = [
             "Developed a scalable REST API using Express and Node, with TDD practices via the Jest library. ",
             "Implemented a self-maintaining database with Supabase that updates in real-time and pulls market data every 60 seconds, using hosted cron functions for maintenance and updates.",
             "Built a responsive front-end with React, MUI, and Tailwind, leveraging Supabase’s Real-Time feature for low-latency updates.",
-            " This solution significantly reduces manual labor and increases trading opportunities for private clients."
+            " This solution significantly reduces manual labor and increases trading opportunities for the private client."
         ],
         "reflectionsAndFutureDirections": [
             "Plan to improve cron job efficiency and database operations to boost system scalability.",
