@@ -1,5 +1,4 @@
 /* eslint-disable react/no-unescaped-entities */
-
 import { Button } from "@/components/ui/button"
 import { ChevronRight } from 'lucide-react';
 import { Link } from "react-router-dom";
@@ -32,8 +31,7 @@ function About() {
                 </Button>
             </div>
         </div>
-
     )
 }
 
-export default About
+export default About;

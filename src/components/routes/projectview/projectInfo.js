@@ -172,7 +172,8 @@ export const projects = [
             "Utilised React Native to develop a cross-platform mobile application.",
             "Integrated Firebase for authentication and real-time database solutions.",
             "Implemented Google Maps for locating events and guiding users to event locations.",
-            "Adopted an agile working environment, utilizing best industry practices and focusing on iterative development and feedback."
+            "Adopted an agile working environment, utilising best industry practices and focusing on iterative development and feedback.",
+            "In app chat system to allow communication between users"
         ],
         results: [
             "Successfully launched a mobile app that enhances connectivity among board game enthusiasts.",

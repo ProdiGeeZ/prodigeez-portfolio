@@ -1,15 +1,10 @@
-import {
-    NavigationMenu,
-    NavigationMenuList,
-    NavigationMenuItem,
-    NavigationMenuLink
-} from "@/components/ui/navigation-menu";
-import { Menu } from 'lucide-react';
-import { ModeToggle } from "./ModeToggle";
-import { Button } from "../ui/button";
+import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink } from "@/components/ui/navigation-menu";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "../ui/dropdown-menu";
 import { Link as Scroll } from 'react-scroll'
+import { ModeToggle } from "./ModeToggle";
 import { Link } from "react-router-dom";
+import { Button } from "../ui/button";
+import { Menu } from 'lucide-react';
 
 function NavBar() {
     return (
@@ -18,7 +13,9 @@ function NavBar() {
                 <div className="flex justify-between items-center py-6 md:justify-start">
                     <div className="flex justify-start lg:w-0 lg:flex-1">
                         <a href="/" className="text-xl md:text-2xl font-bold text-primary transition-all" >
-                            <span className="inline-flex p-0 m-0 items-center"><img src="https://waltibmozphnocxzjzxf.supabase.co/storage/v1/object/public/personal/favicon.svg?t=2024-04-19T17%3A59%3A28.415Z" width={50} className="p-0 m-0"/><p className="">SAABIR.DEV</p></span>
+                            <span className="inline-flex p-0 m-0 items-center"><img src="https://waltibmozphnocxzjzxf.supabase.co/storage/v1/object/public/personal/favicon.svg?t=2024-04-19T17%3A59%3A28.415Z" width={50} className="p-0 m-0" />
+                                <p className="">SAABIR.DEV</p>
+                            </span>
                         </a>
                     </div>
                     <div className="md:hidden flex space-x-2 ">
@@ -47,12 +44,16 @@ function NavBar() {
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
-                                <Scroll to="about" spy={true} smooth={true} duration={500} className="text-base font-medium cursor-pointer self-center">
-                                    About
+                                <Scroll to="about" spy={true} href="/about" smooth={true} duration={500} className="text-base font-medium cursor-pointer self-center">
+                                    <NavigationMenuLink href="/" className="text-base font-medium">
+                                        About
+                                    </NavigationMenuLink>
                                 </Scroll>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
-                                <Button variant='default' href="/contact" className="transition ease-in-out">Contact Me</Button>
+                                <Button variant='default' href="/contact" className="transition ease-in-out">
+                                    Contact Me
+                                </Button>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
                                 <ModeToggle />

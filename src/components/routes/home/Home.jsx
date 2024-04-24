@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import About from "./About";
 import { Link as Scroll } from 'react-scroll'
 import { Link } from "react-router-dom";
+import Contact from "./Contact";
 
 function Home() {
     return (
@@ -44,6 +45,9 @@ function Home() {
             </div>
             <div id="about">
                 <About  />
+            </div>
+            <div id="contact">
+                <Contact  />
             </div>
         </>
     )
