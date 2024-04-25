@@ -9,6 +9,7 @@ import {
     Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage,
     BreadcrumbSeparator
 } from "@/components/ui/breadcrumb";
+import ProjectNav from "@/components/custom/ProjectNav";
 import { Separator } from "@/components/ui/separator";
 import { Slash } from "lucide-react";
 
@@ -26,6 +27,7 @@ function ProjectView() {
 
     return (
         <>
+            <ProjectNav />
             <div className="flex justify-center w-[100%] md:w-[85%] lg:w-[80%] mx-auto md:justify-start my-4">
                 <Breadcrumb>
                     <BreadcrumbList>
@@ -88,7 +90,7 @@ function ProjectView() {
                                     <CalendarDays className="mr-2 h-4 w-4 opacity-70" /> {projectInfo.date}
                                 </span>
                                 <span>
-                                        
+
                                     <Button onClick={toggleDarkMode} className="my-2 mb-0 mx-2 md:mx-0 shadow-md mr-1">
                                         {darkMode ? 'View Light Mode' : 'View Dark Mode'}
                                     </Button>

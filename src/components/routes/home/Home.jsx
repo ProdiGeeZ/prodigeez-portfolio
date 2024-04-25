@@ -6,10 +6,12 @@ import About from "./About";
 import { Link as Scroll } from 'react-scroll'
 import { Link } from "react-router-dom";
 import Contact from "./Contact";
+import NavBar from "@/components/custom/NavBar";
 
 function Home() {
     return (
         <>
+            <NavBar />
             <div className="w-full h-full m-w-screen flex items-center justify-center">
                 <div className="text-center w-full h-[100vh] md:pt-15 mt-8 md:mt-0 flex flex-col items-center p-1 md:p-20">
                     <Avatar

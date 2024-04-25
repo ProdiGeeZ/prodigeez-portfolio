@@ -44,15 +44,17 @@ function NavBar() {
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
-                                <Scroll to="about" spy={true} href="/about" smooth={true} duration={500} className="text-base font-medium cursor-pointer self-center">
-                                    <NavigationMenuLink href="/" className="text-base font-medium">
+                                <NavigationMenuLink href="/" className="text-base font-medium">
+                                    <Scroll to="about" spy={true} href="/about" smooth={true} duration={500} className="text-base font-medium cursor-pointer self-center">
                                         About
-                                    </NavigationMenuLink>
-                                </Scroll>
+                                    </Scroll>
+                                </NavigationMenuLink>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
                                 <Button variant='default' href="/contact" className="transition ease-in-out">
-                                    Contact Me
+                                <Scroll to="contact" spy={true} href="/about" smooth={true} duration={500}>
+                                        Contact Me
+                                    </Scroll>
                                 </Button>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
