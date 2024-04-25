@@ -1,6 +1,5 @@
 import './App.css'
 import { ThemeProvider } from './components/ThemeContext'
-import NavBar from './components/custom/NavBar'
 import Home from './components/routes/home/Home'
 import { Routes, Route } from 'react-router-dom';
 import Projects from './components/routes/projects/Projects';
@@ -12,7 +11,6 @@ function App() {
   return (
     <>
       <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-        <NavBar />
         <Sidebar/>
         <Routes>
           <Route path="/" element={<Home />} />
