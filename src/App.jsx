@@ -9,9 +9,10 @@ import ResumeView from './components/routes/Resume/ResumeView';
 import { inject } from '@vercel/analytics';
 import { injectSpeedInsights } from '@vercel/speed-insights';
 
+inject();
+injectSpeedInsights();
+  
 function App() {
-  inject();
-  injectSpeedInsights();
   return (
     <>
       <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
