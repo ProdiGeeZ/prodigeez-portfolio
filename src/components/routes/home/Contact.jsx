@@ -1,19 +1,68 @@
 /* eslint-disable react/no-unescaped-entities */
-import { ContactUs } from "@/components/custom/ContactUs";
+import { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { Mails } from 'lucide-react';
+import { Label } from '@/components/ui/label';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Button } from '@/components/ui/button';
 
 function Contact() {
+    const [sent, setSent] = useState(false);
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs
+            .sendForm('main_service', 'default_forwarding', form.current, {
+                publicKey: `${import.meta.env.VITE_PUBLIC_KEY}`,
+            })
+            .then(
+                () => {
+                    alert('Message successfully sent!');
+                    setSent(true)
+                    form.current.reset();
+                },
+                (error) => {
+                    alert('Failed to send message: ' + error.text);
+                },
+            );
+    };
     return (
-        <div className="px-10 py-12 w-full mt-12 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 h-screen items-center">
-            <div className="flex flex-col justify-center text-left p-10 ml-20 mx-auto">
-                <span className="inline-flex flex-row w-full gap-1"><Mails size={40}/><h1 className='font-bold text-xl lg:text-4xl mb-4'> Drop me a Message!</h1></span>
-                <p className="leading-relaxed text-base lg:text-xl">
-                    If you would like to work with me, or require anymore information or help with any code related matters, feel free to reach out to me and we can have a conversation! I hope to hear from you!
+        <div className="container w-full min-h-screen flex flex-col justify-center items-center overflow-auto py-4">
+            <div className="flex flex-col gap-4 justify-center items-center w-full px-4 text-center">
+                <div className="inline-flex gap-2 justify-center items-center">
+                    <Mails size={45} />
+                    <h1 className='font-bold text-xl md:text-3xl lg:text-4xl mb-4'>Drop me a Message!</h1>
+                </div>
+                <p className="text-sm md:text-base lg:text-2xl">
+                    Got a question or proposal, or just want to say hello? Go ahead.
                 </p>
             </div>
-            <div className="flex justify-center items-center p-5 lg:p-20">
-                <div className="w-full h-auto flex flex-col justify-center items-center">
-                    <ContactUs />
+            <div className="flex flex-col lg:flex-row justify-center items-center w-full px-4 lg:px-20 gap-4">
+                <div className="flex flex-col w-full max-w-md lg:max-w-lg mx-auto">
+                    <form ref={form} onSubmit={sendEmail} className='flex flex-col gap-4 p-4 md:p-6 lg:p-8'>
+                        <div className="grid grid-cols-1 gap-y-2">
+                            <Label className="font-medium">Name</Label>
+                            <Input type="text" name="user_name" className="border rounded-md p-2" placeholder="Your Name" />
+                        </div>
+                        <div className="grid grid-cols-1 gap-y-2">
+                            <Label htmlFor="email" className="font-medium">Email</Label>
+                            <Input type="email" id="email" name="user_email" className="border rounded-md p-2" placeholder="Your Email" />
+                        </div>
+                        <div className="grid grid-cols-1 gap-y-2">
+                            <Label className="font-medium">Message</Label>
+                            <Textarea name="message" className="border rounded-md p-2 h-36" />
+                        </div>
+                        <Button
+                            type="submit"
+                            className="font-bold rounded focus:outline-none focus:ring-2 focus:ring-primary transition-colors duration-200 ease-in-out w-full md:w-2/3 lg:w-1/3 mx-auto mt-4"
+                            disabled={sent ? true : false}
+                        >
+                            Send Message
+                        </Button>
+                    </form>
                 </div>
             </div>
         </div>
