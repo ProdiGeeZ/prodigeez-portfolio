@@ -1,5 +1,5 @@
 <img src="https://waltibmozphnocxzjzxf.supabase.co/storage/v1/object/public/personal/SAABIR.DEV.png" alt="MarineGEO circle logo" />
-<br>
+
 # Portfolio Project
 
 Welcome to my 'first' self-approved portfolio repository! This site showcases my skills, projects, and professional journey as a junior full-stack developer.
