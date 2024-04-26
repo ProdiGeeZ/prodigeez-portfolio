@@ -29,8 +29,8 @@ function NavBar() {
                                 <DropdownMenuItem>
                                     <Link to="/projects">Projects</Link>
                                 </DropdownMenuItem>
-                                <DropdownMenuItem href="/contact">
-                                    Contact Me
+                                <DropdownMenuItem>
+                                    <Link to="./cv.pdf" target="_blank">CV</Link>
                                 </DropdownMenuItem>
                             </DropdownMenuContent>
                         </DropdownMenu>
@@ -44,6 +44,11 @@ function NavBar() {
                                 <Scroll to="about" spy={true} smooth={true} duration={500} className="text-base font-medium cursor-pointer self-center">
                                     About
                                 </Scroll>
+                            </NavigationMenuItem>
+                            <NavigationMenuItem>
+                            <NavigationMenuLink href="/resume" target="_blank" className="text-base font-medium">
+                                    CV
+                                </NavigationMenuLink>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
                                 <Button variant='default' className="transition ease-in-out">
