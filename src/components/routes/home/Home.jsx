@@ -17,7 +17,7 @@ function Home() {
                 <div className="flex flex-col items-center justify-center w-full text-center p-4 md:p-10">
                     <Avatar className="rounded-full w-48 h-48 mb-4 ring-1 ring-primary">
                         <AvatarImage src="https://waltibmozphnocxzjzxf.supabase.co/storage/v1/object/public/personal/avatar.png?t=2024-04-18T18%3A45%3A19.706Z" />
-                        <AvatarFallback><h1 className="text-2xl">SA</h1></AvatarFallback>
+                        <AvatarFallback><h1 className="text-2xl">just a sec...</h1></AvatarFallback>
                     </Avatar>
                     <h1 className="text-5xl md:text-7xl font-bold mb-2 text-primary">Hi, I'm Saabir.</h1>
                     <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2">Junior Software Engineer</h2>
