@@ -7,9 +7,11 @@ import ProjectView from './components/routes/projectview/ProjectView';
 import Sidebar from './components/custom/SideBar';
 import ResumeView from './components/routes/Resume/ResumeView';
 import { inject } from '@vercel/analytics';
+import { injectSpeedInsights } from '@vercel/speed-insights';
 
 function App() {
   inject();
+  injectSpeedInsights();
   return (
     <>
       <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
