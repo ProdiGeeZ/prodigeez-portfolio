@@ -14,7 +14,7 @@ function Home() {
         <>
             <NavBar />
             <div className="flex items-center justify-center w-full h-screen m-w-screen overflow-hidden">
-                <div className="flex flex-col items-center justify-center w-full text-center p-4 md:p-10">
+                <div className="flex flex-col items-center justify-center w-full text-center p-4 md:p-10 gap-4">
                     <Avatar className="rounded-full w-48 h-48 mb-4 ring-1 ring-primary">
                         <AvatarImage src="https://waltibmozphnocxzjzxf.supabase.co/storage/v1/object/public/personal/avatar.png?t=2024-04-18T18%3A45%3A19.706Z" />
                         <AvatarFallback><h1 className="text-2xl">just a sec...</h1></AvatarFallback>
