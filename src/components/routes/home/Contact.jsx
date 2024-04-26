@@ -109,7 +109,7 @@ function Contact() {
                         </div>
                         {sending && <Progress value={progress} className="w-full" />}
                         {sent && isObjectEmpty(errors) &&
-                            <div className="p-4 max-w-sm mx-auto bg-green-100 rounded-lg border border-green-200 shadow-sm flex items-center justify-between">
+                            <div className="p-4 mx-auto bg-green-100 rounded-lg border border-green-200 shadow-sm flex items-center justify-between">
                                 <p className="text-green-800 text-sm md:text-base">
                                     Thanks for your message! I'll get back to you soon! 👍
                                 </p>
