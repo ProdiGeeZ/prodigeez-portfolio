@@ -4,7 +4,7 @@ import { Input } from '../ui/input';
 import { Button } from '../ui/button';
 import { Label } from '../ui/label';
 import { Textarea } from '../ui/textarea';
-import { Card, CardHeader } from '../ui/card';
+import { Card } from '../ui/card';
 
 export const ContactUs = () => {
     const form = useRef();
@@ -13,7 +13,7 @@ export const ContactUs = () => {
         e.preventDefault();
 
         emailjs
-            .sendForm('service_0001', 'template_hxm64hm', form.current, {
+            .sendForm('main_service', 'default_forwarding', form.current, {
                 publicKey: `${import.meta.env.VITE_PUBLIC_KEY}`,
             })
             .then(
@@ -27,18 +27,21 @@ export const ContactUs = () => {
     };
 
     return (
-        <Card className="flex p-10 justify-center items-center flex-col w-full mx-auto my-8 shadow-lg rounded-lg">
-            <CardHeader>
-                <p className="text-4xl font-semibold text-left">Email Me Here!</p>
-            </CardHeader>
-            <form ref={form} onSubmit={sendEmail} className='flex flex-col gap-4 p-5 w-full'>
-                <Label className="font-medium">Name</Label>
-                <Input type="text" name="user_name" className="p-2 border rounded-md" />
-                <Label className="font-medium">Email</Label>
-                <Input type="email" name="user_email" className="p-2 border rounded-md" />
+        <Card className="flex justify-center items-center flex-col shadow-lg rounded-lg w-full">
+            <form ref={form} onSubmit={sendEmail} className='flex flex-col gap-4 p-10 w-full'>
+                <div className="inline-flex flex-row gap-10">
+                    <span className="w-full">
+                        <Label className="font-medium">Name</Label>
+                        <Input type="text" name="user_name" className="border rounded-md" />
+                    </span>
+                    <span className="w-full">
+                    <Label className="font-medium">Email</Label>
+                        <Input type="email" name="user_email" className="border rounded-md" />
+                    </span>
+                </div>
                 <Label className="font-medium">Message</Label>
-                <Textarea name="message" className="p-2 border rounded-md h-36" />
-                <Button type="submit" className=" font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition-colors duration-200 ease-in-out">Send Message</Button>
+                <Textarea name="message" className="border rounded-md h-36" />
+                <Button type="submit" className=" font-bold rounded focus:outline-none focus:shadow-outline transition-colors duration-200 ease-in-out w-1/3 mx-auto mt-4">Send Message</Button>
             </form>
         </Card>
     );
