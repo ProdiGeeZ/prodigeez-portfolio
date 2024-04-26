@@ -6,9 +6,10 @@ import Projects from './components/routes/projects/Projects';
 import ProjectView from './components/routes/projectview/ProjectView';
 import Sidebar from './components/custom/SideBar';
 import ResumeView from './components/routes/Resume/ResumeView';
+import { inject } from '@vercel/analytics';
 
 function App() {
-
+  inject();
   return (
     <>
       <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
