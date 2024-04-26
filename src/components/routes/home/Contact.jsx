@@ -33,9 +33,9 @@ function Contact() {
         <div className="container w-full min-h-screen flex flex-col justify-center items-center overflow-auto py-4">
             <div className="flex flex-col gap-4 justify-center items-center w-full px-4 text-center">
                 <div className="inline-flex gap-2 justify-center items-center">
-                    <span className="inline-flex justify-center items-center">
+                    <span className="inline-flex justify-center items-center gap-1">
                         <Mails size={45} />
-                        <h1 className='font-bold text-2xl md:text-3xl lg:text-4xl mb-4'>Drop me a Message!</h1>
+                        <h1 className='font-bold text-2xl md:text-3xl lg:text-4xl mb-4 pt-4'>Drop me a Message!</h1>
                     </span>
                 </div>
                 <p className="text-sm md:text-base lg:text-2xl">
