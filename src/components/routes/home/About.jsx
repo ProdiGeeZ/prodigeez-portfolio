@@ -14,7 +14,7 @@ function About() {
                 />
             </div>
             <div className="flex flex-col justify-center text-left px-4 md:px-10">
-                <h1 className="text-white font-bold text-3xl mb-4">
+                <h1 className="font-bold text-3xl mb-4">
                     About Me
                 </h1>
                 <h3 className='font-bold text-lg md:text-xl'>Based in Manchester, England 📍</h3>
