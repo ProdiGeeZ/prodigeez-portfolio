@@ -24,10 +24,10 @@ function Home() {
                     <p className="text-base md:text-lg font-semibold mb-4">
                         Eager developer looking to learn, contribute, and grow in vast world of technology.
                     </p>
-                    <Button className="w-1/3 md:w-auto px-4 py-2 rounded-md font-semibold hover:bg-primary hover:text-white transition ease-in-out">
+                    <Button className="w-1/3 md:w-auto px-4 py-2 rounded-md font-semibold transition-all ease-in-out duration-200 shadow-md hover:shadow-lg">
                         <Link to={"/projects"}>View My Work</Link>
                     </Button>
-                    <div className="flex flex-wrap justify-center items-center gap-2 px-5 py-2 mt-4 ring-2 ring-[#076632ad] ring-opacity-50 rounded-full hover:bg-[#4eff6610] transition ease-in-out">
+                    <div className="flex flex-wrap justify-center items-center gap-2 px-5 py-2 mt-4 ring-2 ring-[#076632ad] ring-opacity-50 rounded-full hover:bg-[#4eff6610] transition duration-300 ease-in-out">
                         <h6 className="text-md md:text-lg lg:text-xl font-bold">Tech Stack</h6>
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
                             alt="Node"
@@ -38,8 +38,11 @@ function Home() {
                             className="w-6 h-6 md:w-8 md:h-8 hover:scale-125 transition ease-in-out" />
                         <i className="devicon-postgresql-plain-wordmark text-xl lg:text-[32px] hover:scale-125 transition ease-in-out"></i>
                     </div>
-                    <Scroll to="about" spy={true} smooth={true} duration={500} className="pt-4">
-                        <ChevronDown className="cursor-pointer hover:scale-125 transition ease-in-out" style={{ fontSize: '45px' }} />
+                    <Scroll to="about" spy={true} smooth={true} duration={500} className="my-4">
+                        <div className="flex flex-col justify-center items-center cursor-pointer hover:scale-110 hover:translate-y-3 hover:text-[#51b448] transition duration-300 ease-in-out">
+                            <p>About Me</p>
+                            <ChevronDown style={{ fontSize: '45px' }} ></ChevronDown>
+                        </div>
                     </Scroll>
                 </div>
             </div>
