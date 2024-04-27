@@ -77,7 +77,7 @@ function Contact() {
     };
 
     return (
-        <div className="container w-full min-h-screen flex flex-col justify-center items-center overflow-auto py-4">
+        <div className="container w-full min-h-[80vh] flex flex-col justify-center items-center overflow-auto py-4">
             <div className="flex flex-col gap-4 justify-center items-center w-full px-4 text-center">
                 <div className="inline-flex gap-2 justify-center items-center">
                     <span className="inline-flex justify-center items-center gap-1">

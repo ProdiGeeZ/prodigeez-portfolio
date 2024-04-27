@@ -44,7 +44,7 @@ function Projects() {
                     </BreadcrumbList>
                 </Breadcrumb>
             </div>
-            <div className="w-screen h-full flex flex-col justify-center items-center m-0 p-0">
+            <div className="w-full max-w-screen h-full flex flex-col justify-center items-center">
                 <div className="flex w-full my-10 md:my-4 justify-center items-center flex-col">
                     <h1 className="text-4xl font-bold decoration-1 underline underline-offset-4">Featured Projects</h1><br />
                     <h5 className="text-xl text-gray-500 text-center">Hover over the titles for a quick summary😏</h5>
