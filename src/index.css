@@ -59,11 +59,11 @@
 }
 
 .animated-background {
-  background-size: 400%;
+  background-size: 100%;
 
-  -webkit-animation: animation 3s ease infinite;
-  -moz-animation: animation 3s ease infinite;
-  animation: animation 3s ease infinite;
+  -webkit-animation: animation 0.1s ease infinite;
+  -moz-animation: animation 0.1s ease infinite;
+  animation: animation 0.1s ease infinite;
 }
 
 @keyframes textShine {
@@ -121,3 +121,14 @@
   background-image: url('https://waltibmozphnocxzjzxf.supabase.co/storage/v1/object/public/personal/hover.svg');
 }
 
+.hover-underline-animation {
+  @apply inline-block relative;
+}
+
+.hover-underline-animation::after {
+  @apply dark:bg-white bg-black content-[''] absolute w-full scale-x-0 h-[2px] bottom-0 left-0 origin-left transition-all ease-in-out;
+}
+
+.hover-underline-animation:hover::after {
+  @apply scale-x-100;
+}

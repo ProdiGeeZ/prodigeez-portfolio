@@ -9,7 +9,7 @@ function ProjectNav() {
                     <div className="flex justify-start lg:flex-1">
                         <a href="/" className="flex items-center text-xl md:text-2xl font-bold text-primary transition-all duration-300 ease-in-out">
                         <div className="logo-image transition-all duration-300 ease-in-out" style={{ width: 50, height: 50 }}></div>
-                            <p className=" pt-1">SAABIR.DEV</p>
+                            <p className="ml-2 pt-1 hover:scale-[1.05] transition ease-in-out duration-200">SAABIR.DEV</p>
                         </a>
                     </div>
                     <div className="flex items-center justify-end lg:w-0">
