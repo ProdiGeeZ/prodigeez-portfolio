@@ -1,13 +1,32 @@
+import LoadingScreen from "@/components/custom/LoadingScreen";
+import ProjectNav from "@/components/custom/ProjectNav";
+import { useEffect, useState } from "react";
+import ProjectCard from "./ProjectCard";
+import { Slash } from "lucide-react";
 import {
     Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList,
     BreadcrumbPage,
     BreadcrumbSeparator
 } from "@/components/ui/breadcrumb";
-import ProjectNav from "@/components/custom/ProjectNav";
-import ProjectCard from "./ProjectCard";
-import { Slash } from "lucide-react";
 
 function Projects() {
+    const [loading, setLoading] = useState(true);
+    
+    useEffect(() => {
+        
+    setTimeout(() => {
+        setLoading(false)
+    }, 2000);
+    }, []);
+
+    if (loading) {
+        return (
+            <>
+                <LoadingScreen/>
+            </>
+        )
+    }
+
     return (
         <>
             <ProjectNav />

@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -67,13 +66,55 @@
   animation: animation 3s ease infinite;
 }
 
-@keyframes animation {
+@keyframes textShine {
   0%,
   100% {
-      background-position: 0% 50%;
+    color: #084826;
   }
-  
+  33% {
+    color: #16ca76;
+  }
+  66% {
+    color: #10944e;
+  }
+}
+
+.text-animate {
+  -webkit-animation: textShine 1.2s ease infinite;
+  -moz-animation: textShine 1.2s ease infinite;
+  animation: textShine 1.2s ease infinite;
+}
+
+@keyframes AnimationName {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
   50% {
-      background-position: 100% 50%;
+    background-position: 100% 50%;
   }
+}
+
+@keyframes flashBlink {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+}
+
+.flashBlink {
+  animation: flashBlink 0.1s;
+}
+
+.radial-gradient-bw {
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
 }

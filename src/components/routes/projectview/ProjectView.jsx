@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { projects } from './projectInfo';
 import { CalendarDays, User } from 'lucide-react';
@@ -12,11 +12,28 @@ import {
 import ProjectNav from "@/components/custom/ProjectNav";
 import { Separator } from "@/components/ui/separator";
 import { Slash } from "lucide-react";
+import LoadingScreen from '@/components/custom/LoadingScreen';
 
 function ProjectView() {
-    const { name } = useParams();
     const [darkMode, setDarkMode] = useState(false);
+    const [loading, setLoading] = useState(true);
+    const { name } = useParams();
     const toggleDarkMode = () => setDarkMode(!darkMode);
+    
+    useEffect(() => {
+        
+    setTimeout(() => {
+        setLoading(false)
+    }, 2000);
+    }, []);
+
+    if (loading) {
+        return (
+            <>
+                <LoadingScreen/>
+            </>
+        )
+    }
 
     const projectInfo = projects.find(project => project.name === name);
     if (!projectInfo) {
