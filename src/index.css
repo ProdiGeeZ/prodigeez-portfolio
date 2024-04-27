@@ -69,10 +69,10 @@
 @keyframes textShine {
   0%,
   100% {
-    color: #084826;
+    color: #02833e;
   }
   33% {
-    color: #16ca76;
+    color: #14b46a;
   }
   66% {
     color: #10944e;
@@ -80,9 +80,9 @@
 }
 
 .text-animate {
-  -webkit-animation: textShine 1.2s ease infinite;
-  -moz-animation: textShine 1.2s ease infinite;
-  animation: textShine 1.2s ease infinite;
+  -webkit-animation: textShine 1.125s ease infinite;
+  -moz-animation: textShine 1.125s ease infinite;
+  animation: textShine 1.125s ease infinite;
 }
 
 @keyframes AnimationName {
@@ -103,18 +103,12 @@
   }
   50% {
     opacity: 0;
-    transform: scale(1.1);
+    transform: scale(1.25);
   }
 }
 
 .flashBlink {
-  animation: flashBlink 0.1s;
+  animation: flashBlink 0.25s;
 }
 
-.radial-gradient-bw {
-  background: radial-gradient(
-    circle,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(255, 255, 255, 1) 100%
-  );
-}
+
