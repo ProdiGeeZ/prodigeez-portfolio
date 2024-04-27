@@ -8,8 +8,8 @@ function ProjectNav() {
                 <div className="flex justify-between items-center">
                     <div className="flex justify-start lg:flex-1">
                         <a href="/" className="flex items-center text-xl md:text-2xl font-bold text-primary transition-all">
-                            <img src="https://waltibmozphnocxzjzxf.supabase.co/storage/v1/object/public/personal/favicon.svg" alt="logo" width={50} />
-                            <p className="ml-2 pt-1">SAABIR.DEV</p>
+                            <img src="https://waltibmozphnocxzjzxf.supabase.co/storage/v1/object/public/personal/favicon.svg" alt="logo" width={50} className="p-0 m-0"/>
+                            <p className=" pt-1">SAABIR.DEV</p>
                         </a>
                     </div>
                     <div className="flex items-center justify-end lg:w-0">

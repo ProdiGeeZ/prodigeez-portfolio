@@ -29,7 +29,7 @@ function Projects() {
     return (
         <>
             <ProjectNav />
-            <div className="flex justify-center w-[100%] md:w-[85%] lg:w-[80%] mx-auto md:justify-start md:my-4 mb-0">
+            <div className="flex justify-center items-center md:w-[85%] lg:w-[80%] mx-auto md:justify-start md:my-4 mb-0">
                 <Breadcrumb>
                     <BreadcrumbList>
                         <BreadcrumbItem>
@@ -44,8 +44,8 @@ function Projects() {
                     </BreadcrumbList>
                 </Breadcrumb>
             </div>
-            <div className="w-full h-full flex flex-col justify-center items-center p-10 pt-0">
-                <div className="flex w-full my-10 justify-center items-center flex-col">
+            <div className="w-screen h-full flex flex-col justify-center items-center m-0 p-0">
+                <div className="flex w-full my-10 md:my-4 justify-center items-center flex-col">
                     <h1 className="text-4xl font-bold decoration-1 underline underline-offset-4">Featured Projects</h1><br />
                     <h5 className="text-xl text-gray-500 text-center">Hover over the titles for a quick summary😏</h5>
                 </div>
