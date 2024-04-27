@@ -13,12 +13,12 @@ function NavBar() {
                 <div className="flex justify-between items-center">
                     <div className="flex justify-start lg:flex-1">
                         <a href="/" className="flex items-center text-xl md:text-2xl font-bold text-primary transition-all">
-                            <img src="https://waltibmozphnocxzjzxf.supabase.co/storage/v1/object/public/personal/favicon.svg" alt="logo" width={50} />
+                            <div className="logo-image transition-all duration-300 ease-in-out" style={{ width: 50, height: 50 }}></div>
                             <p className="ml-2 pt-1">SAABIR.DEV</p>
                         </a>
                     </div>
                     <div className="flex items-center space-x-2 md:hidden">
-                    <ModeToggle />
+                        <ModeToggle />
                         <DropdownMenu className="w-full">
                             <DropdownMenuTrigger asChild>
                                 <Button variant="outline" size="icon">
@@ -38,15 +38,15 @@ function NavBar() {
                     <NavigationMenu className="hidden md:flex items-center justify-end lg:w-0">
                         <NavigationMenuList className="flex space-x-8">
                             <NavigationMenuLink href="/projects" className="text-base font-medium">
-                                    Projects
-                                </NavigationMenuLink>
+                                Projects
+                            </NavigationMenuLink>
                             <NavigationMenuItem>
                                 <Scroll to="about" spy={true} smooth={true} duration={500} className="text-base font-medium cursor-pointer self-center">
                                     About
                                 </Scroll>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
-                            <NavigationMenuLink href="/resume" target="_blank" className="text-base font-medium">
+                                <NavigationMenuLink href="/resume" target="_blank" className="text-base font-medium">
                                     CV
                                 </NavigationMenuLink>
                             </NavigationMenuItem>

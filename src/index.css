@@ -111,4 +111,13 @@
   animation: flashBlink 0.125s;
 }
 
+.logo-image {
+  background-image: url('https://waltibmozphnocxzjzxf.supabase.co/storage/v1/object/public/personal/favicon.svg?t=2024-04-27T15%3A17%3A20.133Z');
+  background-size: cover;
+  display: inline-block;
+}
+
+.logo-image:hover {
+  background-image: url('https://waltibmozphnocxzjzxf.supabase.co/storage/v1/object/public/personal/hover.svg');
+}
 
