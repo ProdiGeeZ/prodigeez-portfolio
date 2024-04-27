@@ -1,3 +1,4 @@
+import LoadingScreen from '@/components/custom/LoadingScreen';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { projects } from './projectInfo';
@@ -12,11 +13,10 @@ import {
 import ProjectNav from "@/components/custom/ProjectNav";
 import { Separator } from "@/components/ui/separator";
 import { Slash } from "lucide-react";
-import LoadingScreen from '@/components/custom/LoadingScreen';
 
 function ProjectView() {
-    const [darkMode, setDarkMode] = useState(false);
     const [loading, setLoading] = useState(true);
+    const [darkMode, setDarkMode] = useState(false);
     const { name } = useParams();
     const toggleDarkMode = () => setDarkMode(!darkMode);
     
