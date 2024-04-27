@@ -13,10 +13,9 @@ function Projects() {
     const [loading, setLoading] = useState(true);
     
     useEffect(() => {
-        
     setTimeout(() => {
         setLoading(false)
-    }, 2000);
+    }, 1750);
     }, []);
 
     if (loading) {

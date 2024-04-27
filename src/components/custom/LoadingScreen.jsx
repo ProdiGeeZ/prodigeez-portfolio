@@ -1,28 +1,16 @@
 import { useEffect, useState } from "react";
 import { Progress } from "../ui/progress";
 
+const images = [
+    './1.svg', './2.svg', './3.svg', './4.svg', './5.svg',
+    './6.svg', './7.svg', './8.svg', './9.svg', './10.svg',
+    './11.svg', './12.svg', './13.svg', './14.svg', './15.svg'
+];
+
 function LoadingScreen() {
     const [index, setIndex] = useState(0);
     const [progress, setProgress] = useState(0);
     const [blink, setBlink] = useState(false);
-
-    const images = [
-        'https://waltibmozphnocxzjzxf.supabase.co/storage/v1/object/public/loading/dead%20battery.png',
-        'https://waltibmozphnocxzjzxf.supabase.co/storage/v1/object/public/loading/fetal%20position.png',
-        'https://waltibmozphnocxzjzxf.supabase.co/storage/v1/object/public/loading/jogging.png',
-        'https://waltibmozphnocxzjzxf.supabase.co/storage/v1/object/public/loading/laugh%20cry.png',
-        'https://waltibmozphnocxzjzxf.supabase.co/storage/v1/object/public/loading/ninja%20run.png',
-        'https://waltibmozphnocxzjzxf.supabase.co/storage/v1/object/public/loading/sleepy%20coffee.png',
-        'https://waltibmozphnocxzjzxf.supabase.co/storage/v1/object/public/loading/tough%20walk.png',
-        'https://waltibmozphnocxzjzxf.supabase.co/storage/v1/object/public/loading/homework.png',
-        'https://waltibmozphnocxzjzxf.supabase.co/storage/v1/object/public/loading/i%20hate%20homework.png',
-        'https://waltibmozphnocxzjzxf.supabase.co/storage/v1/object/public/loading/laptop%20cat.png',
-        'https://waltibmozphnocxzjzxf.supabase.co/storage/v1/object/public/loading/spit%20take.png',
-        'https://waltibmozphnocxzjzxf.supabase.co/storage/v1/object/public/loading/steam%20coming%20out%20your%20ears.png',
-        'https://waltibmozphnocxzjzxf.supabase.co/storage/v1/object/public/loading/rock.png',
-        'https://waltibmozphnocxzjzxf.supabase.co/storage/v1/object/public/loading/why.png',
-        'https://waltibmozphnocxzjzxf.supabase.co/storage/v1/object/public/loading/bruh.png',
-    ];
 
     useEffect(() => {
         const intervalId = setInterval(() => {
@@ -33,21 +21,22 @@ function LoadingScreen() {
             setIndex(nextIndex);
             setBlink(true);
             setTimeout(() => setBlink(false), 200);
-        }, 250);
+        }, 350);  
 
         return () => clearInterval(intervalId);
-    }, [index, images.length]);
+    }, [index]);
 
     useEffect(() => {
         const progressInterval = setInterval(() => {
             setProgress(oldProgress => {
-                if (oldProgress >= 100) {
+                const newProgress = oldProgress + 1.25;
+                if (newProgress >= 100) {
                     clearInterval(progressInterval);
                     return 100;
                 }
-                return oldProgress + 1.25;
+                return newProgress;
             });
-        }, 25);
+        }, 20);
 
         return () => clearInterval(progressInterval);
     }, []);

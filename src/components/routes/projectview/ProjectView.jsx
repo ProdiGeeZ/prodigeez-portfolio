@@ -21,10 +21,9 @@ function ProjectView() {
     const toggleDarkMode = () => setDarkMode(!darkMode);
     
     useEffect(() => {
-        
     setTimeout(() => {
         setLoading(false)
-    }, 2000);
+    }, 1750);
     }, []);
 
     if (loading) {
