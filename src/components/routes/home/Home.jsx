@@ -8,7 +8,6 @@ import { Link } from "react-router-dom";
 import Contact from "./Contact";
 import NavBar from "@/components/custom/NavBar";
 
-
 function Home() {
     return (
         <>
