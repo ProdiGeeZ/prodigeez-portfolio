@@ -20,8 +20,8 @@ function Footer() {
                     <p className="text-2xl font-semibold flex justify-center pt-5 xl:items-end">Useful Links</p>
                         <nav className="flex xl:flex-col justify-center items-center ">
                             <div className="px-4 py-2">
-                                <a href="" className="text-base leading-6 text-gray-500 hover-underline-animation hover:text-foreground transition ease-in-out duration-200">
-                                    About
+                                <a href="/" className="text-base leading-6 text-gray-500 hover-underline-animation hover:text-foreground transition ease-in-out duration-200">
+                                    Home
                                 </a>
                             </div>
                             <div className="px-4 py-2">
