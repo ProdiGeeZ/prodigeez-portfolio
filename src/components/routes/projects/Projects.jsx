@@ -1,27 +1,46 @@
+import LoadingScreen from "@/components/custom/LoadingScreen";
+import ProjectNav from "@/components/custom/ProjectNav";
+import { useEffect, useState } from "react";
+import ProjectCard from "./ProjectCard";
+import { Slash } from "lucide-react";
 import {
     Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList,
     BreadcrumbPage,
     BreadcrumbSeparator
 } from "@/components/ui/breadcrumb";
-import ProjectNav from "@/components/custom/ProjectNav";
-import ProjectCard from "./ProjectCard";
-import { Slash } from "lucide-react";
 
 function Projects() {
+    const [loading, setLoading] = useState(true);
+    
+    useEffect(() => {
+        
+    setTimeout(() => {
+        setLoading(false)
+    }, 2000);
+    }, []);
+
+    if (loading) {
+        return (
+            <>
+                <LoadingScreen/>
+            </>
+        )
+    }
+
     return (
         <>
             <ProjectNav />
-            <div className="flex justify-center w-[100%] md:w-[85%] lg:w-[80%] mx-auto md:justify-start md:my-4">
+            <div className="flex justify-center w-[100%] md:w-[85%] lg:w-[80%] mx-auto md:justify-start md:my-4 mb-0">
                 <Breadcrumb>
                     <BreadcrumbList>
                         <BreadcrumbItem>
-                            <BreadcrumbLink href="/" className="text-l my-2">Home</BreadcrumbLink>
+                            <BreadcrumbLink href="/" className="text-l my-2 mb-0">Home</BreadcrumbLink>
                         </BreadcrumbItem>
                         <BreadcrumbSeparator>
-                            <Slash className="text-l my-2" />
+                            <Slash className="text-l my-2 mb-0"/>
                         </BreadcrumbSeparator>
                         <BreadcrumbItem>
-                            <BreadcrumbPage className="text-l my-2">Projects</BreadcrumbPage>
+                            <BreadcrumbPage className="text-l my-2 mb-0">Projects</BreadcrumbPage>
                         </BreadcrumbItem>
                     </BreadcrumbList>
                 </Breadcrumb>
@@ -29,7 +48,7 @@ function Projects() {
             <div className="w-full h-full flex flex-col justify-center items-center p-10 pt-0">
                 <div className="flex w-full my-10 justify-center items-center flex-col">
                     <h1 className="text-4xl font-bold decoration-1 underline underline-offset-4">Featured Projects</h1><br />
-                    <h5 className="text-xl text-gray-500 ">Hover over the titles for a quick summary😏</h5>
+                    <h5 className="text-xl text-gray-500 text-center">Hover over the titles for a quick summary😏</h5>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                     <ProjectCard

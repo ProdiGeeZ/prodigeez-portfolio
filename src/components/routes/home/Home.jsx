@@ -1,15 +1,33 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { ChevronDown } from 'lucide-react';
+import LoadingScreen from "@/components/custom/LoadingScreen";
+import NavBar from "@/components/custom/NavBar";
 import { Button } from "@/components/ui/button"
-import About from "./About";
 import { Link as Scroll } from 'react-scroll'
+import { useEffect, useState } from "react";
+import { ChevronDown } from 'lucide-react';
 import { Link } from "react-router-dom";
 import Contact from "./Contact";
-import NavBar from "@/components/custom/NavBar";
-
+import About from "./About";
 
 function Home() {
+    const [loading, setLoading] = useState(true);
+    
+    useEffect(() => {
+        
+    setTimeout(() => {
+        setLoading(false)
+    }, 2000);
+    }, []);
+
+    if (loading) {
+        return (
+            <>
+                <LoadingScreen/>
+            </>
+        )
+    }
+
     return (
         <>
             <NavBar />
