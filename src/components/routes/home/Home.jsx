@@ -9,6 +9,7 @@ import { ChevronDown } from 'lucide-react';
 import { Link } from "react-router-dom";
 import Contact from "./Contact";
 import About from "./About";
+import Footer from "@/components/custom/Footer";
 
 function Home() {
     const [loading, setLoading] = useState(true);
@@ -69,6 +70,7 @@ function Home() {
             <div id="contact">
                 <Contact />
             </div>
+            <Footer/>
         </>
     )
 }

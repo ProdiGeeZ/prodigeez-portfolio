@@ -8,6 +8,7 @@ import {
     BreadcrumbPage,
     BreadcrumbSeparator
 } from "@/components/ui/breadcrumb";
+import Footer from "@/components/custom/Footer";
 
 function Projects() {
     const [loading, setLoading] = useState(true);
@@ -79,6 +80,7 @@ function Projects() {
                     />
                 </div>
             </div>
+            <Footer/>
         </>
     )
 }

@@ -13,6 +13,7 @@ import {
 import ProjectNav from "@/components/custom/ProjectNav";
 import { Separator } from "@/components/ui/separator";
 import { Slash } from "lucide-react";
+import Footer from '@/components/custom/Footer';
 
 function ProjectView() {
     const [loading, setLoading] = useState(true);
@@ -204,6 +205,7 @@ function ProjectView() {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </>
     );
 }
