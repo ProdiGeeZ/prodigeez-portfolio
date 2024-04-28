@@ -8,6 +8,7 @@ import Sidebar from './components/custom/SideBar';
 import ResumeView from './components/routes/Resume/ResumeView';
 import { inject } from '@vercel/analytics';
 import { injectSpeedInsights } from '@vercel/speed-insights';
+import Footer from './components/custom/Footer';
 
 inject();
 injectSpeedInsights();
@@ -23,6 +24,7 @@ function App() {
           <Route path="/projects/:name" element={<ProjectView />} />
           <Route path="/resume" element={<ResumeView />} />
         </Routes>
+        <Footer/>
       </ThemeProvider>
     </>
   )

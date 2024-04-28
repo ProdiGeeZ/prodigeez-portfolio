@@ -42,7 +42,7 @@ function LoadingScreen() {
     }, []);
 
     return (
-        <div className="w-screen h-screen flex justify-center items-center">
+        <div className="w-full h-screen max-w-screen flex justify-center items-center">
             <div className="w-[350px] h-auto flex flex-col justify-center items-center">
                 <img src={images[index]} className={`w-[300px] h-auto ${blink ? 'blink' : ''}`} alt="Loading image" />
                 <p className="text-4xl font-bold text-animate py-2">Loading...</p>
