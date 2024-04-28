@@ -9,6 +9,7 @@ import ResumeView from './components/routes/Resume/ResumeView';
 import { inject } from '@vercel/analytics';
 import { injectSpeedInsights } from '@vercel/speed-insights';
 import Footer from './components/custom/Footer';
+import NotFound from './components/routes/notfound/NotFound';
 
 inject();
 injectSpeedInsights();
@@ -23,6 +24,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/:name" element={<ProjectView />} />
           <Route path="/resume" element={<ResumeView />} />
+          <Route path="/*" element={<NotFound />} />
         </Routes>
         <Footer/>
       </ThemeProvider>
