@@ -2,6 +2,7 @@ export const projects = [
     {
         "name": "pairsniper",
         "title": "PairSniper Analytics",
+        "metadescription": "PairSniper is a customised trading analytics platform that automates data aggregation from market exchanges.",
         "description": "PairSniper is a customised trading analytics platform that automates data aggregation from market exchanges. It visualises real-time data to help users focus on strategy and capitalise on opportunities efficiently. Designed for scalability, it initially catered to a specific client's trading strategy.",
         "initialSituation": "The client had a unique trading strategy which proved successful. However, it was labor-intensive and prone to errors, leading to missed trading opportunities.",
         "problemIdentification": "There was a need for an automated system that could handle complex data-handling and ensure fast, accurate data retrieval for effective trading strategy execution.",
@@ -89,6 +90,7 @@ export const projects = [
     {
         name: "nc-news",
         title: "Northcoders News",
+        "metadescription": "Northcoders News API is a backend service that allows programmatic access to application data, enabling access such as articles, topics, and user comments.",
         description: "Northcoders News API is a backend service akin to those underpinning websites like Reddit. It allows programmatic access to application data, enabling the frontend to display information such as articles, topics, and user comments. The API is built using a PSQL database and interacts with it through node-postgres.",
         initialSituation: "The need was for a backend solution capable of serving data to a content rating and discussion platform. The focus was on a service that could reliably serve up information as and when needed by the frontend. A a web-based front end client which utilises this api to load content dynamically",
         problemIdentification: "A robust and scalable API was required that could manage and deliver structured content to a web application, facilitating user interactions such as content rating and discussions.",
@@ -149,6 +151,7 @@ export const projects = [
     {
         name: "square-up",
         title: "Northcoders Final Group Project - SquareUp",
+        "metadescription": "SquareUp is a mobile app designed to connect board game enthusiasts. It allows users to join and host events, and find events nearby on a map.",
         description: "SquareUp is a mobile app designed to connect board game enthusiasts. It allows users to join and host events, instant message others, discover new games, and find events nearby on a map. The app was developed as a final group project at Northcoders, embracing new technologies and agile methodologies.",
         initialSituation: "Board game enthusiasts often struggle to find like-minded individuals and events nearby. There was a clear need for a platform to easily connect users, manage event participation, and foster community engagement.",
         problemIdentification: "A mobile platform was needed that could provide a robust solution for event management, user connectivity, and game discovery, all integrated within an easy-to-use mobile interface.",
