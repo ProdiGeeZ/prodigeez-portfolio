@@ -20,7 +20,6 @@ For a more detailed look at my projects and skills, visit [www.saabir.dev](https
 
 # TO DO 
 
-- on-page SEO
 - Modularise content on site
 - Add images and links for portfolio projects
 - blog functionality
