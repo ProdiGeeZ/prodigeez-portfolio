@@ -9,26 +9,31 @@ import {
     BreadcrumbSeparator
 } from "@/components/ui/breadcrumb";
 import Footer from "@/components/custom/Footer";
+import { Helmet } from 'react-helmet';
 
 function Projects() {
     const [loading, setLoading] = useState(true);
-    
+
     useEffect(() => {
-    setTimeout(() => {
-        setLoading(false)
-    }, 1750);
+        setTimeout(() => {
+            setLoading(false)
+        }, 1750);
     }, []);
 
     if (loading) {
         return (
             <>
-                <LoadingScreen/>
+                <LoadingScreen />
             </>
         )
     }
 
     return (
         <>
+            <Helmet>
+                <title>Saabir Ahmed - Projects</title>
+                <meta name="description" content="List of projects and work completed by Saabir Ahmed. These include group and solo experience." />
+            </Helmet>
             <ProjectNav />
             <div className="flex justify-center items-center md:w-[85%] lg:w-[80%] mx-auto md:justify-start md:my-4 mb-0">
                 <Breadcrumb>
@@ -37,7 +42,7 @@ function Projects() {
                             <BreadcrumbLink href="/" className="text-l my-2 mb-0">Home</BreadcrumbLink>
                         </BreadcrumbItem>
                         <BreadcrumbSeparator>
-                            <Slash className="text-l my-2 mb-0"/>
+                            <Slash className="text-l my-2 mb-0" />
                         </BreadcrumbSeparator>
                         <BreadcrumbItem>
                             <BreadcrumbPage className="text-l my-2 mb-0">Projects</BreadcrumbPage>
@@ -48,7 +53,7 @@ function Projects() {
             <div className="w-full max-w-screen h-full flex flex-col justify-center items-center">
                 <div className="flex w-full my-10 md:my-4 justify-center items-center flex-col">
                     <h1 className="text-4xl font-bold decoration-1 underline underline-offset-4">Featured Projects</h1><br />
-                    <h5 className="text-xl text-gray-500 text-center">Hover over the titles for a quick summary😏</h5>
+                    <h2 className="text-xl text-gray-500 text-center">Hover over the titles for a quick summary😏</h2>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                     <ProjectCard
@@ -80,7 +85,7 @@ function Projects() {
                     />
                 </div>
             </div>
-            <Footer/>
+            <Footer />
         </>
     )
 }

@@ -14,23 +14,24 @@ import ProjectNav from "@/components/custom/ProjectNav";
 import { Separator } from "@/components/ui/separator";
 import { Slash } from "lucide-react";
 import Footer from '@/components/custom/Footer';
+import { Helmet } from 'react-helmet';
 
 function ProjectView() {
     const [loading, setLoading] = useState(true);
     const [darkMode, setDarkMode] = useState(false);
     const { name } = useParams();
     const toggleDarkMode = () => setDarkMode(!darkMode);
-    
+
     useEffect(() => {
-    setTimeout(() => {
-        setLoading(false)
-    }, 1750);
-    }, []);
+        setTimeout(() => {
+            setLoading(false)
+        }, 1750);
+    });
 
     if (loading) {
         return (
             <>
-                <LoadingScreen/>
+                <LoadingScreen />
             </>
         )
     }
@@ -44,6 +45,10 @@ function ProjectView() {
 
     return (
         <>
+            <Helmet>
+                <title>Projects - {projectInfo.title}</title>
+                <meta name="description" content={`${projectInfo.metadescription}`} />
+            </Helmet>
             <ProjectNav />
             <div className="flex justify-center w-[100%] md:w-[85%] lg:w-[80%] mx-auto md:justify-start my-4">
                 <Breadcrumb>
@@ -205,7 +210,7 @@ function ProjectView() {
                     </div>
                 </div>
             </div>
-            <Footer/>
+            <Footer />
         </>
     );
 }

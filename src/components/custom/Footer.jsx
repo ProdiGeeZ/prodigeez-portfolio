@@ -11,13 +11,13 @@ function NewsletterForm({ setEmail, handleInsert, loading, errors }) {
     return (
         <form onSubmit={handleInsert}>
             <div className="inline-flex gap-2 w-full">
-                <Input 
-                    type="email" 
-                    id="email" 
-                    name="user_email" 
-                    className="border-2 border-foreground/45 shadow-md rounded-md p-2 mb-2" 
-                    placeholder="Your Email" 
-                    onChange={(event) => setEmail(event.target.value)} 
+                <Input
+                    type="email"
+                    id="email"
+                    name="user_email"
+                    className="border-2 border-foreground/45 shadow-md rounded-md p-2 mb-2"
+                    placeholder="Your Email"
+                    onChange={(event) => setEmail(event.target.value)}
                 />
                 <Button disabled={loading} type="submit">
                     {loading ? 'Subscribing...' : 'Subscribe'}
@@ -106,24 +106,26 @@ function Footer() {
 
     return (
         <>
-            <Separator className="max-w-screen mt-10" />
-            <section className="bg-background overflow-hidden max-w-screen">
-                <div className="sm:px-10 w-full p-5 grid grid-cols-1 xl:grid-cols-2 justify-between items-center overflow-hidden">
-                    <div className="w-full px-4 my-0 mx-auto flex flex-col justify-center space-y-4 overflow-hidden sm:px-6 lg:px-8">
-                        <h2 className="text-2xl font-semibold flex justify-center items-center">Very Occasional Newsletter?</h2>
-                        <p className="text-base text-center">I may occasionally write about the personal projects I'm working on. If you're bored...join!</p>
-                        <NewsletterForm email={email} setEmail={setEmail} handleInsert={handleInsert} loading={loading} errors={errors} />
+            <footer>
+                <Separator className="max-w-screen mt-10" />
+                <section className="bg-background overflow-hidden max-w-screen">
+                    <div className="sm:px-10 w-full p-5 grid grid-cols-1 xl:grid-cols-2 justify-between items-center overflow-hidden">
+                        <div className="w-full px-4 my-0 mx-auto flex flex-col justify-center space-y-4 overflow-hidden sm:px-6 lg:px-8">
+                            <h2 className="text-2xl font-semibold flex justify-center items-center">Very Occasional Newsletter?</h2>
+                            <p className="text-base text-center">I may occasionally write about the personal projects I'm working on. If you're bored...join!</p>
+                            <NewsletterForm email={email} setEmail={setEmail} handleInsert={handleInsert} loading={loading} errors={errors} />
+                        </div>
+                        <div className="w-full overflow-hidden sm:px-6 flex flex-col">
+                            <h3 className="text-2xl font-semibold flex justify-center pt-5 xl:items-end">Useful Links</h3>
+                            <UsefulLinks />
+                        </div>
                     </div>
-                    <div className="w-full overflow-hidden sm:px-6 flex flex-col">
-                        <h3 className="text-2xl font-semibold flex justify-center pt-5 xl:items-end">Useful Links</h3>
-                        <UsefulLinks />
+                    <Separator className="max-w-screen mt-1" />
+                    <div className="text-xs sm:text-base text-center text-gray-400 p-2 py-4">
+                        © 2024 Saabir.dev, Inc. All rights reserved. (verbally)
                     </div>
-                </div>
-                <Separator className="max-w-screen mt-1" />
-                <footer className="text-xs sm:text-base text-center text-gray-400 p-2 py-4">
-                    © 2024 Saabir.dev, Inc. All rights reserved. (verbally)
-                </footer>
-            </section>
+                </section>
+            </footer>
         </>
     );
 }
