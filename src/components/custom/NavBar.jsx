@@ -38,22 +38,22 @@ function NavBar() {
                         </div>
                         <NavigationMenu className="hidden md:flex items-center justify-end lg:w-0">
                             <NavigationMenuList className="flex space-x-8">
-                                <NavigationMenuLink href="/projects" className="text-base font-medium hover-underline-animation">
+                                <NavigationMenuLink href="/projects" className="text-base font-medium hover-underline-animation" aria-label="navigate to projects page">
                                     Projects
                                 </NavigationMenuLink>
                                 <NavigationMenuItem className="text-base font-medium hover-underline-animation">
-                                    <Scroll to="about" spy={true} smooth={true} duration={500} className="text-base font-medium cursor-pointer self-center">
+                                    <Scroll to="about" spy={true} smooth={true} duration={500} className="text-base font-medium cursor-pointer self-center" aria-label="scroll to about">
                                         About
                                     </Scroll>
                                 </NavigationMenuItem>
                                 <NavigationMenuItem>
-                                    <NavigationMenuLink href="/resume" target="_blank" className="text-base font-medium hover-underline-animation">
+                                    <NavigationMenuLink href="/resume" target="_blank" className="text-base font-medium hover-underline-animation" aria-label="navigate to CV">
                                         CV
                                     </NavigationMenuLink>
                                 </NavigationMenuItem>
                                 <NavigationMenuItem>
                                     <Button variant='default' className="transition ease-in-out shine">
-                                        <Scroll to="contact" spy={true} smooth={true} duration={500}>
+                                        <Scroll to="contact" spy={true} smooth={true} duration={500} aria-label="scroll to contact">
                                             Contact Me
                                         </Scroll>
                                     </Button>

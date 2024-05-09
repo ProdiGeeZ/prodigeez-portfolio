@@ -19,7 +19,7 @@ function NewsletterForm({ setEmail, handleInsert, loading, errors }) {
                     placeholder="Your Email"
                     onChange={(event) => setEmail(event.target.value)}
                 />
-                <Button disabled={loading} type="submit">
+                <Button disabled={loading} type="submit" aria-label="subscribe to email list">
                     {loading ? 'Subscribing...' : 'Subscribe'}
                 </Button>
             </div>
@@ -31,9 +31,9 @@ function NewsletterForm({ setEmail, handleInsert, loading, errors }) {
 function UsefulLinks() {
     return (
         <nav className="flex xl:flex-col justify-center items-center">
-            <LinkItem href="/" text="Home" />
-            <LinkItem href="/projects" text="Projects" />
-            <LinkItem href="/cv.pdf" text="CV" target="_blank" />
+            <LinkItem href="/" text="Home" aria-label="link to home"/>
+            <LinkItem href="/projects" text="Projects" aria-label="link to projects"/>
+            <LinkItem href="/cv.pdf" text="CV" target="_blank" aria-label="link to CV resume"/>
         </nav>
     );
 }
